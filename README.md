@@ -24,6 +24,7 @@ Se requiere de los siguientes recursos para el proyecto:
   
 # Api References
 
+Estilo de programación o estandard de programación https://google.github.io/styleguide/javaguide.html
 Referencias de la api backend.(No disponible)
 
 # Tests
