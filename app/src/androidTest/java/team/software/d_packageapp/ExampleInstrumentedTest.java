@@ -1,4 +1,4 @@
-package com.example.caceres.d_package;
+package team.software.d_packageapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.caceres.d_package", appContext.getPackageName());
+        assertEquals("team.software.d_packageapp", appContext.getPackageName());
     }
 }
