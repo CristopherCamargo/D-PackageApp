@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".HomeClient"
+            android:name=".RegisterClient"
             android:label="@string/title_activity_home_client"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterClient" />
+        <activity android:name=".HomeClient" />
         <activity android:name=".RequestPackage" />
         <activity android:name=".LoginPreview" />
         <activity android:name=".RegisterProviderService" />

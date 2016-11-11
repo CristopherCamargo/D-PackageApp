@@ -3,4 +3,16 @@
     <string name="title_activity_home_client">HomeClient</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--Raidy-->
+    <string name="first_name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="password">Contraseña</string>
+    <string name="mobile">Teléfono</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="sign">Registrar</string>
+    <string name="term_condition">Aceptar Terminos y Condiciones</string>
+    <string name="login_facebook">Login facebook</string>
+    <string name="login_google">Login google</string>
+    <string name="login_twitter">Login twitter</string>
 </resources>
