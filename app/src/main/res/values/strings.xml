@@ -8,11 +8,11 @@
     <string name="first_name">Nombre</string>
     <string name="last_name">Apellido</string>
     <string name="password">Contraseña</string>
-    <string name="mobile">Teléfono</string>
     <string name="email">Correo Electrónico</string>
     <string name="sign">Registrar</string>
     <string name="term_condition">Aceptar Terminos y Condiciones</string>
     <string name="login_facebook">Login facebook</string>
     <string name="login_google">Login google</string>
     <string name="login_twitter">Login twitter</string>
+    <string name="image_perfil">Imagen Perfil</string>
 </resources>
