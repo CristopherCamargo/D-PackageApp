@@ -12,17 +12,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".RequestPackage" />
+        <activity android:name=".RegisterPaymentMethod" />
+
         <activity
             android:name=".HomeClient"
-            android:label="@string/title_activity_home_client"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterClient" />
-        <activity android:name=".RequestPackage" />
+         <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"/>
         <activity
             android:name=".LoginPreview"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterProviderService" />
-        <activity android:name=".RegisterPaymentMethod" />
         <activity
             android:name=".LoginPreview2"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -34,6 +36,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SelectRegister"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        </activity>
+
+        <!-- Raidy -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,8 +51,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login"></activity>
+            android:name=".RegisterClient"
+            android:label="@string/register"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterProviderServiceOne"
+            android:label="@string/step_one"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterProviderServiceTwo"
+            android:label="@string/step_two"
+            android:parentActivityName=".RegisterProviderServiceOne">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RegisterProviderServiceOne" />
+        </activity>
+        <activity android:name=".RegisterProviderServiceThree"
+            android:label="@string/step_three"
+            android:parentActivityName=".RegisterProviderServiceTwo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RegisterProviderServiceTwo" />
+        </activity>
     </application>
 
 </manifest>
