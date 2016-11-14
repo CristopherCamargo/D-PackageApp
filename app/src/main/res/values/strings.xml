@@ -20,6 +20,8 @@
     <string name="login">Iniciar sesión</string>
     <string name="title_activity_login">Sign in</string>
 
+    <string name="imagen">Imagen</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>

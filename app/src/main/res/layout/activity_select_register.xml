@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_select_register"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="team.software.d_packageapp.SelectRegister">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_select_register"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="team.software.d_packageapp.SelectRegister">
+
 
         <TextView
             android:text="@string/wish_preview"
@@ -33,20 +35,20 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:layout_height="@android:dimen/thumbnail_height"
                 app:srcCompat="@mipmap/ic_client_select"
                 android:id="@+id/imageButton2"
                 android:scaleType="fitCenter"
-                android:layout_width="match_parent"
-                android:layout_weight="0.5"
-                style="@android:style/Widget.Material.ImageButton" />
+                android:contentDescription="@string/imagen"
+                android:layout_height="@android:dimen/thumbnail_height"
+                android:layout_width="0dp"
+                android:layout_weight="2"/>
 
             <TextView
                 android:text="@string/wish_client_preview"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:id="@+id/textView13"
-                android:layout_weight="0.5"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textSize="24sp"
                 android:textAlignment="center"
@@ -60,23 +62,23 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="@android:dimen/thumbnail_height"
+                android:contentDescription="@string/imagen"
                 app:srcCompat="@mipmap/ic_register_ps_select"
                 android:id="@+id/imageButton4"
-                android:layout_weight="0.5"
-                android:scaleType="fitCenter"
-                style="@android:style/Widget.Material.ImageButton" />
+                android:scaleType="fitCenter" />
 
             <TextView
                 android:text="@string/wish_ps_preview"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView14"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textSize="24sp"
                 android:textAlignment="center"
-                android:layout_weight="0.5"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical|center_horizontal" />
         </LinearLayout>
@@ -105,5 +107,6 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal" />
 
+
     </LinearLayout>
-</RelativeLayout>
+</ScrollView>
