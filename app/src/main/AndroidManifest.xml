@@ -19,7 +19,7 @@
         <activity
             android:name=".HomeClient"
             android:theme="@style/AppTheme.NoActionBar" />
-         <activity
+        <activity
             android:name=".Login"
             android:label="@string/title_activity_login"/>
         <activity
@@ -37,7 +37,7 @@
         <activity
             android:name=".SelectRegister"
             android:theme="@style/AppTheme.NoActionBar"/>
-        </activity>
+
 
         <!-- Raidy -->
         <activity
@@ -82,5 +82,4 @@
                 android:value=".RegisterProviderServiceTwo" />
         </activity>
     </application>
-
 </manifest>
