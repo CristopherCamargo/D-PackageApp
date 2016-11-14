@@ -2,12 +2,44 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="team.software.d_packageapp">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".RequestPackage" />
+        <activity android:name=".RegisterPaymentMethod" />
+
+        <activity
+            android:name=".HomeClient"
+            android:theme="@style/AppTheme.NoActionBar" />
+         <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"/>
+        <activity
+            android:name=".LoginPreview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginPreview2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginPreview3"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".LoginPreview4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SelectRegister"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        </activity>
+
+        <!-- Raidy -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -18,8 +50,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Raidy -->
         <activity
             android:name=".RegisterClient"
             android:label="@string/register"
@@ -51,13 +81,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RegisterProviderServiceTwo" />
         </activity>
-
-        <!--  -->
-        <activity android:name=".HomeClient" />
-        <activity android:name=".RequestPackage" />
-        <activity android:name=".LoginPreview" />
-        <activity android:name=".RegisterPaymentMethod" />
-
     </application>
 
 </manifest>
