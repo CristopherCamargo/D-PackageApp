@@ -13,15 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".RequestPackage" />
-        <activity android:name=".RegisterPaymentMethod" />
+         <!--default activity-->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity
-            android:name=".HomeClient"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".LoginPreview"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -37,18 +39,13 @@
         <activity
             android:name=".SelectRegister"
             android:theme="@style/AppTheme.NoActionBar"/>
-
-
-        <!-- Raidy -->
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".SelectRegister">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SelectRegister" />
         </activity>
         <activity
             android:name=".RegisterClient"
@@ -81,5 +78,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RegisterProviderServiceTwo" />
         </activity>
+        <activity
+            android:name=".HomeClient"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RequestPackage" />
+        <activity android:name=".RegisterPaymentMethod" />
     </application>
 </manifest>
