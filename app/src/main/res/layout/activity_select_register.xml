@@ -36,8 +36,7 @@
 
             <ImageButton
                 app:srcCompat="@mipmap/ic_client_select"
-                android:id="@+id/buttonRegisterProviderService"
-                android:onClick="launchActivityRegisterProviderService"
+                android:id="@+id/buttonRegisterClient"
                 android:scaleType="fitCenter"
                 android:contentDescription="@string/imagen"
                 android:layout_height="@android:dimen/thumbnail_height"
@@ -68,8 +67,7 @@
                 android:layout_height="@android:dimen/thumbnail_height"
                 android:contentDescription="@string/imagen"
                 app:srcCompat="@mipmap/ic_register_ps_select"
-                android:id="@+id/buttonRegisterClient"
-                android:onClick="launchActivityRegisterClient"
+                android:id="@+id/buttonRegisterProviderService"
                 android:scaleType="fitCenter" />
 
             <TextView
