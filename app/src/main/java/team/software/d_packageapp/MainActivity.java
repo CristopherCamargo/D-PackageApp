@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Class<?> launchWindow() {
-        return LoginPreview.class;
+        return SelectRegister.class;
     }
 
 }
