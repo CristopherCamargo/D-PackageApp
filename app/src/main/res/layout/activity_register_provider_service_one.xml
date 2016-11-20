@@ -55,6 +55,7 @@
                 android:padding="@dimen/activity_horizontal_margin" />
         </LinearLayout>
 
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -148,6 +149,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:digits="1234567890"
                     android:inputType="number"
                     android:ems="10"
                     android:hint="@string/ID_number"
@@ -178,5 +180,6 @@
             android:background="@color/colorPrimary"
             android:id="@+id/buttonContinue"
             android:onClick="launchActivityRegisterProviderServiceTwo"/>
+
     </RelativeLayout>
 </ScrollView>
