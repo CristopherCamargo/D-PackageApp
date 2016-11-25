@@ -70,4 +70,15 @@
     <string name="invalid_contac">Invalid Nº Contact</string>
     <string name="invalid_plateNumber">Invalid Plate Number</string>
     <string name="invalid_year">Invalid Year</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="change">Change</string>
+    <string name="password_not_matches">Passwords Do Not Match</string>
+    <string name="register_bank_details">Register Bank Details</string>
+    <string name="change_password">Change Password</string>
+    <string name="account_owner">Account Owner</string>
+    <string name="name_bank">Name Bank</string>
+    <string name="type_account">Type Account</string>
+    <string name="number_account">Number Account</string>
 </resources>

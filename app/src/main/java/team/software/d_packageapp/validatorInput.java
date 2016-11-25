@@ -71,4 +71,11 @@ public final class validatorInput {
         }
         return false;
     }
+
+    public boolean isValidaEqualPassword(String newPassword, String verifyPassword) {
+        if (newPassword.equals(verifyPassword)) {
+            return true;
+        }
+        return false;
+    }
 }
