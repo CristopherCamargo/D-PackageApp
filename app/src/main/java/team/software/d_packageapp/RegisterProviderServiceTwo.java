@@ -52,6 +52,10 @@ public class RegisterProviderServiceTwo extends AppCompatActivity {
         boolean password = validator.isValidePassword(inputPassword.getText().toString());
 
         if (nLicencse && nContacto && email && password) {
+            tilLicence.setError(null);
+            tilNumContact.setError(null);
+            tilEmail.setError(null);
+            tilPassword.setError(null);
             launchActivityRegisterProviderServiceThree();
         } else {
             if (!nLicencse) {

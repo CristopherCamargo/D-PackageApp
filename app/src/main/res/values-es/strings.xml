@@ -83,4 +83,11 @@
     <string name="error_invalid_password">La contraseña es muy corta</string>
     <string name="recover_password">Recuperar Contraseña</string>
     <string name="indication_recover_password">Ingrese el correo electrónico con el que se registró y le enviaremos un enlace para recuperar su contraseña</string>
+    <string name="savings_account">Cuenta Ahorro</string>
+    <string name="current_account">Cuenta Corriente</string>
+    <string name="selection">Seleccionar</string>
+    <string name="selection_acount">Selecciona un Banco</string>
+    <string name="selection_type_acount">Selecciona un tipo de cuenta</string>
+    <string name="invalid_number_account">Número de cuenta inválido</string>
+    <string name="invalid_owner_account">Nombre Inválido</string>
 </resources>

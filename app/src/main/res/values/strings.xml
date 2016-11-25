@@ -83,4 +83,11 @@
     <string name="number_account">Number Account</string>
     <string name="recover_password">Recover Password</string>
     <string name="indication_recover_password">Enter the email you registered with and we will send you a link to recover your password</string>
+    <string name="savings_account">Savings Account</string>
+    <string name="current_account">Current Account</string>
+    <string name="selection">Selection</string>
+    <string name="selection_acount">Selection an Account</string>
+    <string name="selection_type_acount">Selection an Type Account</string>
+    <string name="invalid_number_account">Invalid Number Account</string>
+    <string name="invalid_owner_account">Invalid Name</string>
 </resources>

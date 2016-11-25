@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Class<?> launchWindow() {
-        return Recover_Password.class;
+        return RegisterProviderServiceOne.class;
     }
 
 }

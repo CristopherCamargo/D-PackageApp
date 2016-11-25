@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="type_account">
-        <item>Ahorro</item>
-        <item>Corriente</item>
+    <string-array name="type_person">
+        <item>V-</item>
+        <item>J-</item>
+        <item>P-</item>
     </string-array>
+
+    <string-array name="name_bank">
+        <item>@string/selection</item>
+        <item>Banco de Venezuela</item>
+        <item>Banco Provincial</item>
+        <item>Banco Mercantil</item>
+    </string-array>
+
 </resources>

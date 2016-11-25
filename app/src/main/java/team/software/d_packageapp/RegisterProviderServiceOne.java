@@ -77,6 +77,11 @@ public class RegisterProviderServiceOne extends AppCompatActivity {
         boolean address = validator.isValideAddress(inputAddress.getText().toString());
 
         if (nombre && apellido && birthday && address) {
+            tilFirstName.setError(null);
+            tilLastName.setError(null);
+            tilDateOfBirth.setError(null);
+            tilIdNumber.setError(null);
+            tilAddress.setError(null);
             launchActivityRegisterProviderServiceTwo();
         } else {
             if (!nombre)
