@@ -63,4 +63,22 @@
     <string name="title_activity_login">Sign in</string>
     <string name="year">Year</string>
     <string name="permission_rationale">Contacts permissions are needed for providing email completions.</string>
+    <string name="invalid_birtday">Invalid Birthday</string>
+    <string name="invalid_idnumber">Invalid ID Number</string>
+    <string name="invalid_address">Invalid Address</string>
+    <string name="invalid_license">Invalid License</string>
+    <string name="invalid_contac">Invalid Nº Contact</string>
+    <string name="invalid_plateNumber">Invalid Plate Number</string>
+    <string name="invalid_year">Invalid Year</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="change">Change</string>
+    <string name="password_not_matches">Passwords Do Not Match</string>
+    <string name="register_bank_details">Register Bank Details</string>
+    <string name="change_password">Change Password</string>
+    <string name="account_owner">Account Owner</string>
+    <string name="name_bank">Name Bank</string>
+    <string name="type_account">Type Account</string>
+    <string name="number_account">Number Account</string>
 </resources>

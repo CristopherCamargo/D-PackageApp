@@ -65,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="@string/password"
+                android:maxLength="16"
                 android:ems="10"
                 android:id="@+id/inputPassword"
                 android:layout_below="@+id/password"/>
