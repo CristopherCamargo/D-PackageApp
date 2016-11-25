@@ -96,7 +96,15 @@
             android:label="@string/change_password" />
         <activity
             android:name=".RegisterBankDetails"
-            android:label="@string/register_bank_details"/>
+            android:label="@string/register_bank_details" />
+        <activity
+            android:name=".Recover_Password"
+            android:label="@string/recover_password"
+            android:parentActivityName=".Login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login" />
+        </activity>
     </application>
 
 </manifest>
