@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Class<?> launchWindow() {
-        return RegisterProviderServiceOne.class;
+        return Edit_Profile_Cliente.class;
     }
 
 }

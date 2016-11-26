@@ -90,4 +90,6 @@
     <string name="selection_type_acount">Selection an Type Account</string>
     <string name="invalid_number_account">Invalid Number Account</string>
     <string name="invalid_owner_account">Invalid Name</string>
+    <string name="save">Save</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>

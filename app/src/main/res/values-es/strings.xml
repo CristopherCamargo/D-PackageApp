@@ -13,7 +13,7 @@
     <string name="you_can_send_package_preview">Recibir y entregar paquetes</string>
     <string name="won_money_preview">Gane dinero por cada envio</string>
     <string name="calificate_preview">Entregue paquetes y sea calificado por sus clientes</string>
-    <string name="money_security_preview">Reciba el dinero de forma segura y rapida</string>
+    <string name="money_security_preview">Reciba el dinero de forma segura y rápida</string>
     <string name="wish_preview">Deseo ser:</string>
     <string name="wish_client_preview">Cliente para enviar paquetes</string>
     <string name="wish_ps_preview">Prestador de servicio y ganar dinero</string>
@@ -90,4 +90,6 @@
     <string name="selection_type_acount">Selecciona un tipo de cuenta</string>
     <string name="invalid_number_account">Número de cuenta inválido</string>
     <string name="invalid_owner_account">Nombre Inválido</string>
+    <string name="save">Guardar</string>
+    <string name="edit_profile">Editar Perfil</string>
 </resources>

@@ -104,6 +104,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Login" />
         </activity>
+        <activity
+            android:name=".Edit_Profile_Cliente"
+            android:label="@string/edit_profile"/>
     </application>
 
 </manifest>
