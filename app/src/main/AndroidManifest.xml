@@ -106,6 +106,9 @@
         </activity>
         <activity
             android:name=".Edit_Profile_Cliente"
+            android:label="@string/edit_profile" />
+        <activity
+            android:name=".edit_profile_provider_service"
             android:label="@string/edit_profile"/>
     </application>
 

@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
 public final class validatorInput {
 
     public boolean isValideName(String name){
-        Pattern patron = Pattern.compile("[a-zA-Z ]+$]");
-        return !patron.matcher(name).matches() && name.length() > 0 && name.length() < 30;
+        Pattern patron = Pattern.compile("[a-zA-Z ]{2,20}");
+        return patron.matcher(name).matches() ;
     }
 
     public boolean isvalideMail(String correo){

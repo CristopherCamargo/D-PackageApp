@@ -66,7 +66,7 @@
     <string name="invalid_idnumber">Nº Identidad Inválido</string>
     <string name="invalid_address">Dirección Inválida</string>
     <string name="invalid_license">Licencia Inválida</string>
-    <string name="invalid_contac">Inválido Nº de Contacto</string>
+    <string name="invalid_contac">Nº de Contacto Inválido</string>
     <string name="invalid_plateNumber">Nº de Placa Inválido</string>
     <string name="invalid_year">Año Inválido</string>
     <string name="current_password">Contraseña Actual</string>
