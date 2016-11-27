@@ -7,4 +7,6 @@
 
     <!--Raidy-->
     <dimen name="size_image_vehicle">100dp</dimen>
+    <dimen name="button_margin_top">50dp</dimen>
+    <dimen name="text_view_margin_top">20dp</dimen>
 </resources>

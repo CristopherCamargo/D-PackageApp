@@ -92,4 +92,9 @@
     <string name="invalid_owner_account">Invalid Name</string>
     <string name="save">Save</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="cardNumber">Card Number</string>
+    <string name="expireDate">Expire Date</string>
+    <string name="nameOnCard">Name on Card</string>
+    <string name="cardCode">Card Code</string>
+    <string name="AddCard">Add Card</string>
 </resources>

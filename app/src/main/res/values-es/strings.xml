@@ -92,4 +92,9 @@
     <string name="invalid_owner_account">Nombre Inválido</string>
     <string name="save">Guardar</string>
     <string name="edit_profile">Editar Perfil</string>
+    <string name="cardNumber">Numero de Tarjeta</string>
+    <string name="expireDate">Fecha de Vencimiento</string>
+    <string name="nameOnCard">Nombre en la tarjeta</string>
+    <string name="cardCode">Codigo de tarjeta</string>
+    <string name="AddCard">Agregar Tarjeta</string>
 </resources>
