@@ -97,4 +97,5 @@
     <string name="nameOnCard">Nombre en la tarjeta</string>
     <string name="cardCode">Codigo de tarjeta</string>
     <string name="AddCard">Agregar Tarjeta</string>
+    <string name="selectCards">Select Card</string>
 </resources>
