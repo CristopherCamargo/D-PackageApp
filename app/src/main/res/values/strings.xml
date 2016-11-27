@@ -17,11 +17,11 @@
     <string name="wish_preview">I wish to be:</string>
     <string name="wish_client_preview">Client to send packets</string>
     <string name="wish_ps_preview">Service provider and earn money</string>
-    <string name="or_preview">Ó bien</string>
+    <string name="or_preview">Or Preview</string>
     <string name="login">Log in</string>
     <string name="invalid_fisrt_name">Invalid Name</string>
     <string name="invalid_last_name">Invalid Last Name</string>
-    <string name="invalid_email">Email Invalid</string>
+    <string name="invalid_email">Invalid Email</string>
     <string name="invalid_password">Invalid Password</string>
     <string name="invalid_conditions">Must Accept Terms</string>
     <string name="ID_Licence">ID License</string>
@@ -37,7 +37,7 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
-    <string name="first_name">name</string>
+    <string name="first_name">Name</string>
     <string name="image_perfil">Profile Image</string>
     <string name="image_vehicle_one">Image of Vehicle One</string>
     <string name="image_vehicle_three">Image of Vehicle Three</string>
@@ -81,4 +81,15 @@
     <string name="name_bank">Name Bank</string>
     <string name="type_account">Type Account</string>
     <string name="number_account">Number Account</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="indication_recover_password">Enter the email you registered with and we will send you a link to recover your password</string>
+    <string name="savings_account">Savings Account</string>
+    <string name="current_account">Current Account</string>
+    <string name="selection">Selection</string>
+    <string name="selection_acount">Selection an Account</string>
+    <string name="selection_type_acount">Selection an Type Account</string>
+    <string name="invalid_number_account">Invalid Number Account</string>
+    <string name="invalid_owner_account">Invalid Name</string>
+    <string name="save">Save</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>

@@ -1,11 +1,6 @@
 package team.software.d_packageapp;
 
-import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -17,10 +12,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class RegisterProviderServiceOne extends AppCompatActivity {
+public class edit_profile_provider_service extends AppCompatActivity {
 
-    @BindView(R.id.imagePerfil)
-    ImageView imagePerfil;
+    @BindView(R.id.imageProfileProvider)
+    ImageView imageProfileProvider;
     @BindView(R.id.inputFirstName)
     EditText inputFirstName;
     @BindView(R.id.til_firstName)
@@ -29,6 +24,10 @@ public class RegisterProviderServiceOne extends AppCompatActivity {
     EditText inputLastName;
     @BindView(R.id.til_lastName)
     TextInputLayout tilLastName;
+    @BindView(R.id.inputDateOfBirth)
+    EditText inputDateOfBirth;
+    @BindView(R.id.til_dateOfBirth)
+    TextInputLayout tilDateOfBirth;
     @BindView(R.id.inputIdNumber)
     EditText inputIdNumber;
     @BindView(R.id.til_idNumber)
@@ -37,52 +36,46 @@ public class RegisterProviderServiceOne extends AppCompatActivity {
     EditText inputAddress;
     @BindView(R.id.til_address)
     TextInputLayout tilAddress;
-    @BindView(R.id.buttonContinue)
-    Button buttonContinue;
-    @BindView(R.id.inputDateOfBirth)
-    EditText inputDateOfBirth;
-    @BindView(R.id.til_dateOfBirth)
-    TextInputLayout tilDateOfBirth;
+    @BindView(R.id.inputLicence)
+    EditText inputLicence;
+    @BindView(R.id.til_licence)
+    TextInputLayout tilLicence;
+    @BindView(R.id.inputNumContact)
+    EditText inputNumContact;
+    @BindView(R.id.til_NumContact)
+    TextInputLayout tilNumContact;
+    @BindView(R.id.buttonSave)
+    Button buttonSave;
 
     validatorInput validator = new validatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_provider_service_one);
+        setContentView(R.layout.activity_edit_profile_provider_service);
         ButterKnife.bind(this);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @OnClick(R.id.buttonContinue)
-    public void launchStepTwo() {
-        checkCampos();
-    }
-
-    @OnClick(R.id.imagePerfil)
-    public void launchGellery() {
-        Toast.makeText(this, "Seleccionar Imagen", Toast.LENGTH_SHORT).show();
-    }
-
-    private void checkCampos() {
+    @OnClick(R.id.buttonSave)
+    public void checkFields(){
         boolean nombre = validator.isValideName(inputFirstName.getText().toString());
         boolean apellido = validator.isValideName(inputLastName.getText().toString());
         boolean birthday = validator.isValideDate(inputDateOfBirth.getText().toString(),"dd/MM/yyyy");
         boolean idnumber = validator.isValideNumber(inputIdNumber.getText().toString());
         boolean address = validator.isValideAddress(inputAddress.getText().toString());
 
-        if (nombre && apellido && birthday && address) {
+        boolean nLicencse = validator.isValideLicense(inputLicence.getText().toString());
+        boolean nContacto = validator.isValideNumber(inputNumContact.getText().toString());
+
+        if (nombre && apellido && birthday && address && nLicencse && nContacto) {
             tilFirstName.setError(null);
             tilLastName.setError(null);
+            tilLicence.setError(null);
+            tilNumContact.setError(null);
             tilDateOfBirth.setError(null);
             tilIdNumber.setError(null);
             tilAddress.setError(null);
-            launchActivityRegisterProviderServiceTwo();
+            launchSaveProfile();
         } else {
             if (!nombre)
                 tilFirstName.setError(getString(R.string.invalid_fisrt_name));
@@ -111,14 +104,22 @@ public class RegisterProviderServiceOne extends AppCompatActivity {
             } else {
                 tilAddress.setError(null);
             }
+
+            if (!nLicencse) {
+                tilLicence.setError(getText(R.string.invalid_license));
+            } else {
+                tilLicence.setError(null);
+            }
+
+            if (!nContacto) {
+                tilNumContact.setError(getString(R.string.invalid_contac));
+            } else {
+                tilNumContact.setError(null);
+            }
         }
-
     }
 
-    private void launchActivityRegisterProviderServiceTwo() {
-        Intent ActivityRegisterProviderServiceTwo = new Intent(this, RegisterProviderServiceTwo.class);
-        startActivity(ActivityRegisterProviderServiceTwo);
+    private void launchSaveProfile() {
+        Toast.makeText(this, "Aqui Guardo", Toast.LENGTH_SHORT).show();
     }
-
-
 }

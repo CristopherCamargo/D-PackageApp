@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
 public final class validatorInput {
 
     public boolean isValideName(String name){
-        Pattern patron = Pattern.compile("[a-zA-Z ]+$]");
-        return !patron.matcher(name).matches() && name.length() > 0 && name.length() < 30;
+        Pattern patron = Pattern.compile("[a-zA-Z ]{2,20}");
+        return patron.matcher(name).matches() ;
     }
 
     public boolean isvalideMail(String correo){
@@ -18,7 +18,7 @@ public final class validatorInput {
     }
 
     public boolean isValidePassword(String password) {
-        return password.length() > 8;
+        return password.length() > 7;
     }
 
     public boolean isValideDate(String dateToValidate, String dateFromat){
@@ -77,5 +77,21 @@ public final class validatorInput {
             return true;
         }
         return false;
+    }
+
+    public boolean isValideAccount(String numAccount) {
+        if (numAccount.length() == 20) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isValideBank(String selection, String stringToCompare) {
+        if (!selection.equals(stringToCompare)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

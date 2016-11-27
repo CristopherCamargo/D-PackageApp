@@ -60,6 +60,8 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
         boolean category = true; //spinnerCategoria;
 
         if (plateNumber && year && check && model && category) {
+            tilPlaca.setError(null);
+            tilAno.setError(null);
             launchRegister();
         } else {
             if (!plateNumber) {

@@ -46,6 +46,9 @@ public class ChangePassword extends AppCompatActivity {
         if (currentPassword && newPassword && verifyPassword) {
             boolean passwordEquals = validator.isValidaEqualPassword(inputNewPassword.getText().toString(),inputVerifyPassword.getText().toString());
             if (passwordEquals) {
+                tilCurrentPassword.setError(null);
+                tilNewPassword.setError(null);
+                tilVerifyPassword.setError(null);
                 launchChangePassword();
             } else {
                 Toast.makeText(this, getString(R.string.password_not_matches), Toast.LENGTH_LONG).show();

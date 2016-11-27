@@ -59,6 +59,10 @@ public class RegisterClient extends AppCompatActivity {
         boolean terminos = checkBoxTermCondition.isChecked();
 
         if (nombre && apellido && email && password && terminos) {
+            tilFirstName.setError(null);
+            tilLastName.setError(null);
+            tilEmail.setError(null);
+            tilPassword.setError(null);
             Toast.makeText(this, "Aqui registro", Toast.LENGTH_SHORT).show();
         } else {
             if (!nombre)
