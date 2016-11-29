@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Class<?> launchWindow() {
-        return edit_profile_provider_service.class;
+        return PaymentCardManagement.class;
     }
 
 }

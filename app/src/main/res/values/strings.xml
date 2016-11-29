@@ -92,4 +92,12 @@
     <string name="invalid_owner_account">Invalid Name</string>
     <string name="save">Save</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="new_request_text">New Request</string>
+    <string name="type_request_text">Type Request</string>
+    <string name="currency_symbol">$</string>
+    <string name="photos_package">Photos Package</string>
+    <string name="destine_text">Destine</string>
+    <string name="origin_text">Origin</string>
+    <string name="type_package_text">Type Package</string>
+    <string name="insure_package_text">Value Insure Package</string>
 </resources>
