@@ -25,21 +25,21 @@
             android:layout_height="56dp">
 
             <TextView
-                android:text="@string/cardNumber"
+                android:text="@string/card_number"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/cardNumber"
                 android:layout_weight="1.01"
-                tools:text="@string/cardNumber"
+                tools:text="@string/card_number"
                 android:layout_marginTop="@dimen/text_view_margin_top" />
 
             <TextView
-                android:text="@string/expireDate"
+                android:text="@string/expire_date"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/expireDate"
                 android:layout_weight="0.50"
-                tools:text="@string/expireDate"
+                tools:text="@string/expire_date"
                 android:layout_marginTop="@dimen/text_view_margin_top" />
 
         </LinearLayout>
@@ -97,21 +97,21 @@
             android:layout_height="49dp">
 
             <TextView
-                android:text="@string/nameOnCard"
+                android:text="@string/name_on_card"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/nameonCard"
                 android:layout_weight="1.80"
-                tools:text="@string/nameOnCard"
+                tools:text="@string/name_on_card"
                 android:layout_marginTop="@dimen/text_view_margin_top" />
 
             <TextView
-                android:text="@string/cardCode"
+                android:text="@string/card_code"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/cardCode"
                 android:layout_weight="1"
-                tools:text="@string/cardCode"
+                tools:text="@string/card_code"
                 android:layout_marginTop="@dimen/text_view_margin_top" />
         </LinearLayout>
 
@@ -141,11 +141,11 @@
         </LinearLayout>
 
         <Button
-            android:text="@string/AddCard"
+            android:text="@string/add_card"
             android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:id="@+id/addCard"
-            tools:text="@string/AddCard"
+            tools:text="@string/add_card"
             android:elevation="0dp"
             android:backgroundTint="@color/colorAccent"
             android:layout_marginTop="@dimen/button_margin_top"
@@ -161,7 +161,7 @@
         android:layout_height="100dp">
 
         <TextView
-            android:text="@string/selectCards"
+            android:text="@string/select_cards"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/select_cards"
