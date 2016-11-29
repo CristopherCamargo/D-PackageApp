@@ -20,7 +20,7 @@ public class Recover_Password extends AppCompatActivity {
     @BindView(R.id.til_email)
     TextInputLayout til_email;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

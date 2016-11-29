@@ -40,7 +40,7 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
     @BindView(R.id.buttonRegistrar)
     Button buttonRegistrar;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

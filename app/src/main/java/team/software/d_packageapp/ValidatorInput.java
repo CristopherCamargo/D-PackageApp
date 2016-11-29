@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Pattern;
 
-public final class validatorInput {
+public final class ValidatorInput {
 
     public boolean isValideName(String name){
         Pattern patron = Pattern.compile("[a-zA-Z ]{2,20}");

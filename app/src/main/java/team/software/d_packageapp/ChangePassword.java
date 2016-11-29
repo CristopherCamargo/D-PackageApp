@@ -28,7 +28,7 @@ public class ChangePassword extends AppCompatActivity {
     @BindView(R.id.buttonChange)
     Button buttonChange;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

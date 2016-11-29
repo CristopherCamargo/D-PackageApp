@@ -106,4 +106,7 @@
     <string name="card_code">Card Code</string>
     <string name="add_card">Add Card</string>
     <string name="select_cards">Select Cards</string>
+    <string name="visa">tarjeta VISA</string>
+    <string name="master">Tarjeta MasterCard</string>
+    <string name="Tag">Tag</string>
 </resources>

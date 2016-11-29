@@ -21,9 +21,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:text="@string/new_request_text"
@@ -51,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/request_currency"
                     android:layout_weight="1"
-                    android:gravity="right|end"
+                    android:gravity="end"
                     android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
                 <TextView
@@ -71,19 +69,21 @@
                     android:layout_height="wrap_content"
                     app:srcCompat="@android:drawable/ic_media_ff"
                     android:id="@+id/imageButton"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:contentDescription="@string/imagen" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@android:drawable/ic_media_play"
                     android:id="@+id/imageButton2"
+                    android:contentDescription="@string/imagen"
                     android:layout_weight="1" />
 
             </LinearLayout>
 
             <TextView
-                android:text="Tag"
+                android:text="@string/Tag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView20"
@@ -107,7 +107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@android:drawable/ic_input_add"
-                android:id="@+id/imageButton3" />
+                android:id="@+id/imageButton3"
+                android:contentDescription="@string/imagen" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -124,6 +125,7 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/imagen"
                     app:srcCompat="@android:drawable/ic_menu_mylocation"
                     android:id="@+id/imageButton4"
                     android:layout_weight="1" />
@@ -152,6 +154,7 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/imagen"
                     app:srcCompat="@android:drawable/ic_menu_mylocation"
                     android:id="@+id/imageButton5"
                     android:layout_weight="1" />
@@ -197,7 +200,7 @@
                     android:id="@+id/textView24"
                     android:layout_weight="2"
                     android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                    android:gravity="right" />
+                    android:gravity="end" />
 
                 <EditText
                     android:layout_width="112dp"

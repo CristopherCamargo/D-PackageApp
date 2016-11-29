@@ -1,11 +1,7 @@
 package team.software.d_packageapp;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -44,7 +40,7 @@ public class RegisterProviderServiceOne extends AppCompatActivity {
     @BindView(R.id.til_dateOfBirth)
     TextInputLayout tilDateOfBirth;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

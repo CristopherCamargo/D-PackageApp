@@ -47,10 +47,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_height="wrap_content">
 
             <EditText
                 android:layout_width="wrap_content"
@@ -58,7 +55,7 @@
                 android:inputType="number|numberPassword"
                 android:ems="10"
                 android:id="@+id/cardNumberInput"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:maxLength="20" />
 
             <LinearLayout
@@ -129,7 +126,7 @@
                 android:id="@+id/nameCardInput" />
 
             <EditText
-                android:layout_width="74dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:inputType="numberPassword"
                 android:ems="10"
@@ -137,7 +134,7 @@
                 android:maxLength="3"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:layout_weight="0.25" />
+                android:layout_weight="1" />
         </LinearLayout>
 
         <Button
@@ -146,8 +143,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/addCard"
             tools:text="@string/add_card"
-            android:elevation="0dp"
-            android:backgroundTint="@color/colorAccent"
+            android:background="@color/colorAccent"
             android:layout_marginTop="@dimen/button_margin_top"
             android:layout_gravity="center" />
 
@@ -173,8 +169,8 @@
             android:layout_height="wrap_content">
 
             <CheckBox
-                android:text="tarjeta VISA"
-                android:layout_width="match_parent"
+                android:text="@string/visa"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/array_cards"
                 style="?attr/radioButtonStyle"
@@ -196,8 +192,8 @@
             android:layout_height="match_parent">
 
             <CheckBox
-                android:text="tarjeta MasterCard"
-                android:layout_width="match_parent"
+                android:text="@string/master"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/array_cards2"
                 style="@android:style/Widget.Material.Light.CompoundButton.RadioButton"

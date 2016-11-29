@@ -12,7 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Edit_Profile_Cliente extends AppCompatActivity {
+public class EditProfileCliente extends AppCompatActivity {
 
     @BindView(R.id.imageProfileClient)
     ImageView imageProfileClient;
@@ -35,7 +35,7 @@ public class Edit_Profile_Cliente extends AppCompatActivity {
     @BindView(R.id.buttonSave)
     Button buttonSave;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

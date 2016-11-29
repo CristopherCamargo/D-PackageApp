@@ -32,7 +32,7 @@ public class RegisterProviderServiceTwo extends AppCompatActivity {
     @BindView(R.id.buttonContinue)
     Button buttonContinue;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -35,7 +35,7 @@ public class RegisterClient extends AppCompatActivity {
     @BindView(R.id.til_password)
     TextInputLayout tilPassword;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

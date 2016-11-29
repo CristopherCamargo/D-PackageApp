@@ -105,10 +105,10 @@
                 android:value=".Login" />
         </activity>
         <activity
-            android:name=".Edit_Profile_Cliente"
+            android:name=".EditProfileCliente"
             android:label="@string/edit_profile" />
         <activity
-            android:name=".edit_profile_provider_service"
+            android:name=".EditProfileProviderService"
             android:label="@string/edit_profile" />
         <activity android:name=".PaymentCardManagement"></activity>
     </application>

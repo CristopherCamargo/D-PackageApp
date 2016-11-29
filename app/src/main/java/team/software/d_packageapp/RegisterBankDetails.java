@@ -43,7 +43,7 @@ public class RegisterBankDetails extends AppCompatActivity {
     @BindView(R.id.radioErrorTypeAccount)
     TextView radioErrorTypeAccount;
 
-    validatorInput validator = new validatorInput();
+    ValidatorInput validator = new ValidatorInput();
 
 
     @Override
