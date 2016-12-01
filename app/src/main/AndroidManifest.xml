@@ -110,7 +110,9 @@
         <activity
             android:name=".EditProfileProviderService"
             android:label="@string/edit_profile" />
-        <activity android:name=".PaymentCardManagement"></activity>
+        <activity android:name=".PaymentCardManagement" />
+        <activity android:name=".QualifyServiceProvider" />
+        <activity android:name=".ServiceProviderView"></activity>
     </application>
 
 </manifest>
