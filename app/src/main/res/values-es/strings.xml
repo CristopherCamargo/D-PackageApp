@@ -109,4 +109,6 @@
     <string name="visa">tarjeta VISA</string>
     <string name="master">Tarjeta MasterCard</string>
     <string name="Tag">Tag</string>
+    <string name="rate_ride">Rate Your Ride</string>
+    <string name="comment">Leave a Comment</string>
 </resources>
