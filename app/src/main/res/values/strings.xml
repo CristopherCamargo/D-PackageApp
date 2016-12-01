@@ -107,11 +107,11 @@
     <string name="card_number">Card Number</string>
     <string name="add_card">Add Card</string>
     <string name="select_cards">Select Cards</string>
-    <string name="visa">tarjeta VISA</string>
-    <string name="master">Tarjeta MasterCard</string>
+    <string name="visa">Card VISA</string>
+    <string name="master">Card MasterCard</string>
     <string name="Tag">Tag</string>
-    <string name="your_receipt" translatable="false">Your Receipt</string>
+    <string name="your_receipt">Your Receipt</string>
     <string name="submit_comment">"Submit "</string>
-    <string name="rate_ride" translatable="false">Rate Your Ride</string>
+    <string name="rate_ride">Rate Your Ride</string>
     <string name="comment">Leave a Comment</string>
 </resources>

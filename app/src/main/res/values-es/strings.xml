@@ -106,12 +106,12 @@
     <string name="card_code">Card Code</string>
     <string name="add_card">Add Card</string>
     <string name="select_cards">Select Cards</string>
-    <string name="visa">tarjeta VISA</string>
+    <string name="visa">Tarjeta VISA</string>
     <string name="master">Tarjeta MasterCard</string>
     <string name="Tag">Tag</string>
     <string name="submit_comment">Comentar</string>
     <string name="comment">Leave a Comment</string>
     <string name="your_receipt" translatable="false">Tu Recibo</string>
-    <string name="rate_ride" translatable="false">Puntua tu envio</string>
+    <string name="rate_ride" translatable="false">Puntúa tu envio</string>
     <string name="card_number">Numero de tarjeta</string>
 </resources>
