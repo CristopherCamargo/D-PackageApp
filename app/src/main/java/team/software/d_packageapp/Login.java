@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -35,11 +36,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import team.software.connection.AsyncResponse;
 import team.software.connection.RequestBase;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import android.content.SharedPreferences;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -81,10 +85,33 @@ public class Login extends AppCompatActivity implements AsyncResponse{
         Log.i("com.prueba",output);
         Context context = getApplicationContext();
         Gson gson = new Gson();
-        JsonObject jsonObject = gson.fromJson(output, JsonObject.class);
-        String response = jsonObject.get("status").getAsString();
-        Toast toast = Toast.makeText(context, response , Toast.LENGTH_SHORT);
-        toast.show();
+        Map<String, String> jsonObject = gson.fromJson(output, Map.class);
+
+        //Verify error or connect
+        String verify = jsonObject.get("status");
+        if(verify != null && !verify.isEmpty()){
+            Toast toast = Toast.makeText(context, getString(R.string.no_login_message), Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        else{
+            //Save token
+            SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString("user_token", jsonObject.get("token"));
+            editor.commit();
+
+            //Change activity
+            if(jsonObject.get("type").compareTo("client")==0) {
+                Intent home_activity = new Intent(this, HomeClient.class);
+                startActivity(home_activity);
+            }else{
+                Intent home_activity = new Intent(this, HomeClient.class);
+                startActivity(home_activity);
+            }
+            //Activity finish
+            this.finish();
+        }
+
     }
 }
 
