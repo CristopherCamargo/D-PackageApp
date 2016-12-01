@@ -8,12 +8,18 @@
     <string name="send_package_preview">Enviar Paquetes</string>
     <string name="monitory_text_preview">Y monitorizarlos en cada momento</string>
     <string name="you_can_express_preview">Puedes elegir para enviar de inmediato (Express)</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="how_client_preview">Como cliente puedes</string>
+    <string name="send_package_preview">Enviar Paquetes</string>
+    <string name="monitory_text_preview">Y monitorizarlos en cada momento</string>
+    <string name="you_can_express_preview">Puedes elegir para enviarlo de inmediato (Express)</string>
     <string name="save_money_preview">Ahorra dinero con comodas cuotas</string>
     <string name="you_can_ps_preview">Como prestador de servicio puedes</string>
     <string name="you_can_send_package_preview">Recibir y entregar paquetes</string>
     <string name="won_money_preview">Gane dinero por cada envio</string>
     <string name="calificate_preview">Entregue paquetes y sea calificado por sus clientes</string>
     <string name="money_security_preview">Reciba el dinero de forma segura y rápida</string>
+    <string name="money_security_preview">Reciba el dinero de forma segura y rapida</string>
     <string name="wish_preview">Deseo ser:</string>
     <string name="wish_client_preview">Cliente para enviar paquetes</string>
     <string name="wish_ps_preview">Prestador de servicio y ganar dinero</string>
@@ -114,4 +120,9 @@
     <string name="your_receipt" translatable="false">Tu Recibo</string>
     <string name="rate_ride" translatable="false">Puntúa tu envio</string>
     <string name="card_number">Numero de tarjeta</string>
+
+    <string name="tag">Etiqueta</string>
+    <string name="destine">Destino</string>
+    <string name="service_provider">Provedor de servicio</string>
+    <string name="no_login_message">Login invalid</string>
 </resources>

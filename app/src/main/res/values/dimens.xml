@@ -9,4 +9,9 @@
     <dimen name="size_image_vehicle">100dp</dimen>
     <dimen name="button_margin_top">50dp</dimen>
     <dimen name="text_view_margin_top">20dp</dimen>
+    <!-- Cristopher -->
+    <dimen name="tabBarSize">68dp</dimen>
+    <dimen name="toolBar">34dp</dimen>
+    <dimen name="iconRequest">84dp</dimen>
+
 </resources>

@@ -12,6 +12,8 @@
     <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
     <!-- <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED"/> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -113,6 +115,9 @@
         <activity android:name=".PaymentCardManagement" />
         <activity android:name=".QualifyServiceProvider" />
         <activity android:name=".ServiceProviderView"></activity>
+        <activity android:name=".ListRequestPackage" />
+        <activity android:name="team.software.adapters.AdapterRequestPackage" />
+        <activity android:name=".Tracing"></activity>
     </application>
 
 </manifest>
