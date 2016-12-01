@@ -190,16 +190,28 @@
                             android:layout_height="wrap_content"
                             android:inputType="textShortMessage"
                             android:ems="10"
-                            android:id="@+id/editText5"
+                            android:id="@+id/leave_comment"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_below="@+id/ratingBar"
                             android:textStyle="normal|bold"
                             android:textColor="@color/colorDivider"
-                            android:hint="@string/comment"/>
+                            android:hint="@string/comment"
+                            android:layout_above="@+id/submit_comment"
+                            android:lines="2"/>
+
+                        <Button
+                            android:text="@string/submit_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/submit_comment"
+                            android:background="@color/colorAccent"
+                            android:textColor="@android:color/background_light"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            />
                     </RelativeLayout>
                 </LinearLayout>
             </RelativeLayout>

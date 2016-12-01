@@ -109,6 +109,9 @@
     <string name="visa">tarjeta VISA</string>
     <string name="master">Tarjeta MasterCard</string>
     <string name="Tag">Tag</string>
-    <string name="rate_ride">Rate Your Ride</string>
+    <string name="submit_comment">Comentar</string>
     <string name="comment">Leave a Comment</string>
+    <string name="your_receipt" translatable="false">Tu Recibo</string>
+    <string name="rate_ride" translatable="false">Puntua tu envio</string>
+    <string name="card_number">Numero de tarjeta</string>
 </resources>
