@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(getApplicationContext(),launchWindow());
         startActivity(intent);
+        finish();
     }
 
     private Class<?> launchWindow() {
-        return ListRequestPackage.class;
+        return Login.class;
     }
 }

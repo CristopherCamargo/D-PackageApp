@@ -52,6 +52,10 @@ public class EditProfileCliente extends AppCompatActivity {
         boolean numContact = validator.isValideNumber(inputNumContact.getText().toString());
 
         if (firstName && lastName && birthDay && numContact) {
+            tilFirstName.setError(null);
+            tilLastName.setError(null);
+            tilDateOfBirth.setError(null);
+            tilNumContact.setError(null);
             launchSave();
         } else {
             if (!firstName) {

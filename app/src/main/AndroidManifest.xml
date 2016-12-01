@@ -2,16 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="team.software.d_packageapp">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
-    <!--  -->
-    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
-    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
-    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
-    <!-- <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED"/> -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -114,10 +107,14 @@
             android:label="@string/edit_profile" />
         <activity android:name=".PaymentCardManagement" />
         <activity android:name=".QualifyServiceProvider" />
-        <activity android:name=".ServiceProviderView"></activity>
+        <activity
+            android:name=".HomePrestadorServicio"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ServiceProviderView"/>
         <activity android:name=".ListRequestPackage" />
         <activity android:name="team.software.adapters.AdapterRequestPackage" />
-        <activity android:name=".Tracing"></activity>
+        <activity
+            android:name=".Tracing"/>
     </application>
 
 </manifest>
