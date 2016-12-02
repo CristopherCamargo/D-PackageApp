@@ -8,20 +8,20 @@ import java.util.regex.Pattern;
 
 public final class ValidatorInput {
 
-    public boolean isValideName(String name){
+    boolean isValideName(String name){
         Pattern patron = Pattern.compile("[a-zA-Z ]{2,20}");
         return patron.matcher(name).matches() ;
     }
 
-    public boolean isvalideMail(String correo){
+    boolean isvalideMail(String correo){
         return Patterns.EMAIL_ADDRESS.matcher(correo).matches();
     }
 
-    public boolean isValidePassword(String password) {
+    boolean isValidePassword(String password) {
         return password.length() > 7;
     }
 
-    public boolean isValideDate(String dateToValidate, String dateFromat){
+    boolean isValideDate(String dateToValidate, String dateFromat){
         if(dateToValidate == null){
             return false;
         }
@@ -40,58 +40,35 @@ public final class ValidatorInput {
         return true;
     }
 
-    public boolean isValideNumber(String number){
-        return Patterns.PHONE.matcher(number).matches();
+    boolean isValideNumber(String number){
+        return number.length() == 11;
     }
 
-    public boolean isValideAddress(String address) {
-        if (address.length() > 0) {
-            return true;
-        }
-        return  false;
+    boolean isValideAddress(String address) {
+        return  address.length() > 0;
     }
 
-    public boolean isValideLicense(String license) {
-        if (license.length() > 0) {
-            return true;
-        }
-        return false;
+    boolean isValideLicense(String license) {
+        return license.length() > 0;
     }
 
-    public boolean isValideYear(String year) {
-        if (year.length() == 4) {
-            return true;
-        }
-        return false;
+    boolean isValideYear(String year) {
+        return year.length() == 4;
     }
 
-    public boolean isValidePlateNumber(String plateNumber) {
-        if (plateNumber.length() == 6) {
-            return true;
-        }
-        return false;
+    boolean isValidePlateNumber(String plateNumber) {
+        return plateNumber.length() == 6;
     }
 
-    public boolean isValidaEqualPassword(String newPassword, String verifyPassword) {
-        if (newPassword.equals(verifyPassword)) {
-            return true;
-        }
-        return false;
+    boolean isValidaEqualPassword(String newPassword, String verifyPassword) {
+        return newPassword.equals(verifyPassword);
     }
 
-    public boolean isValideAccount(String numAccount) {
-        if (numAccount.length() == 20) {
-            return true;
-        } else {
-            return false;
-        }
+    boolean isValideAccount(String numAccount) {
+        return numAccount.length() == 20;
     }
 
-    public boolean isValideBank(String selection, String stringToCompare) {
-        if (!selection.equals(stringToCompare)) {
-            return true;
-        } else {
-            return false;
-        }
+    boolean isValideBank(String selection, String stringToCompare) {
+        return !selection.equals(stringToCompare);
     }
 }
