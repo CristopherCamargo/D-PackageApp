@@ -34,6 +34,10 @@ public class RegisterClient extends AppCompatActivity {
     TextInputLayout tilEmail;
     @BindView(R.id.til_password)
     TextInputLayout tilPassword;
+    @BindView(R.id.inputPhone)
+    EditText inputPhone;
+    @BindView(R.id.til_phone)
+    TextInputLayout tilPhone;
 
     ValidatorInput validator = new ValidatorInput();
 
@@ -57,12 +61,14 @@ public class RegisterClient extends AppCompatActivity {
         boolean email = validator.isvalideMail(inputEmail.getText().toString());
         boolean password = validator.isValidePassword(inputPassword.getText().toString());
         boolean terminos = checkBoxTermCondition.isChecked();
+        boolean phone = validator.isValideNumber(inputPhone.getText().toString());
 
         if (nombre && apellido && email && password && terminos) {
             tilFirstName.setError(null);
             tilLastName.setError(null);
             tilEmail.setError(null);
             tilPassword.setError(null);
+            tilPhone.setError(null);
             Toast.makeText(this, "Aqui registro", Toast.LENGTH_SHORT).show();
         } else {
             if (!nombre)
@@ -84,6 +90,11 @@ public class RegisterClient extends AppCompatActivity {
                 tilPassword.setError(getString(R.string.invalid_password));
             else
                 tilPassword.setError(null);
+
+            if (!phone)
+                tilPhone.setError(getString(R.string.invalid_phone));
+            else
+                tilPhone.setError(null);
 
             if (!terminos) {
                 Toast.makeText(this, getString(R.string.invalid_conditions), Toast.LENGTH_SHORT).show();

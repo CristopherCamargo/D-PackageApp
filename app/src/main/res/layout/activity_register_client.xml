@@ -132,11 +132,27 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_password"
+            android:id="@+id/til_phone">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/phone"
+                android:ems="10"
+                android:id="@+id/inputPhone"/>
+
+        </android.support.design.widget.TextInputLayout>
+
         <CheckBox
             android:text="@string/term_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/til_password"
+            android:layout_below="@+id/til_phone"
             android:layout_centerHorizontal="true"
             android:id="@+id/checkBoxTermCondition"
             android:layout_margin="@dimen/activity_vertical_margin"

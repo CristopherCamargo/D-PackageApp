@@ -120,4 +120,6 @@
     <string name="no_login_message">Login invalid</string>
     <string name="express">Express</string>
     <string name="status_send">Enviar</string>
+    <string name="phone">Teléfono</string>
+    <string name="invalid_phone">Telefono Invalido</string>
 </resources>
