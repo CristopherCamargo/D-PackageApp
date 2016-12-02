@@ -41,7 +41,7 @@ public final class ValidatorInput {
     }
 
     boolean isValideNumber(String number){
-        return Patterns.PHONE.matcher(number).matches();
+        return number.length() == 11;
     }
 
     boolean isValideAddress(String address) {

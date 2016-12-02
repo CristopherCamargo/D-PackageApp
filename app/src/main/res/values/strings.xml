@@ -122,4 +122,6 @@
     <string name="no_login_message">Login invalid</string>
     <string name="phone">Telephone</string>
     <string name="invalid_phone">Invalid Telephone</string>
+    <string name="register_completed">Register Completed</string>
+    <string name="invalid_email_exist">Este email ya existe</string>
 </resources>
