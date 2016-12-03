@@ -52,8 +52,8 @@ public final class ValidatorInput {
         return license.length() > 0;
     }
 
-    boolean isValideYear(String year) {
-        return year.length() == 4;
+    boolean isValideColor(String color) {
+        return color.length() == 7;
     }
 
     boolean isValidePlateNumber(String plateNumber) {

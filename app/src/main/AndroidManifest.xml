@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -66,20 +69,12 @@
         </activity>
         <activity
             android:name=".RegisterProviderServiceTwo"
-            android:label="@string/step_two"
-            android:parentActivityName=".RegisterProviderServiceOne">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".RegisterProviderServiceOne" />
-        </activity>
+            android:label="@string/step_two"/>
+
         <activity
             android:name=".RegisterProviderServiceThree"
-            android:label="@string/step_three"
-            android:parentActivityName=".RegisterProviderServiceTwo">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".RegisterProviderServiceTwo" />
-        </activity>
+            android:label="@string/step_three"/>
+
         <activity
             android:name=".HomeClient"
             android:theme="@style/AppTheme.NoActionBar" />
