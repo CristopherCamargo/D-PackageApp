@@ -62,7 +62,7 @@
     <string name="title_activity_login">Registrarse</string>
     <string name="year">Año</string>
     <string name="permission_rationale">Se necesitan permisos de contactos para proporcionar terminaciones de correo electrónico.</string>
-    <string name="invalid_birtday">Fecha de Nacimiento Inválida</string>
+    <string name="invalid_birtday">Fecha de Nacimiento Inválida aaaa-mm-dd</string>
     <string name="invalid_idnumber">Nº Identidad Inválido</string>
     <string name="invalid_address">Dirección Inválida</string>
     <string name="invalid_license">Licencia Inválida</string>

@@ -187,7 +187,6 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 category = "" + id;
-                Toast.makeText(RegisterProviderServiceThree.this, "" + id, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -202,7 +201,6 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 model = "" + id;
-                Toast.makeText(RegisterProviderServiceThree.this, "" + id, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -358,8 +356,12 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
                     }
                 } else {
                     Toast.makeText(RegisterProviderServiceThree.this, getString(R.string.register_completed), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegisterProviderServiceThree.this, Login.class);
+                    Intent intent = new Intent(RegisterProviderServiceThree.this, SelectRegister.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("register", true);
                     startActivity(intent);
+
+
                 }
             }
 
