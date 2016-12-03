@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -29,6 +30,17 @@ public class Login extends AppCompatActivity implements AsyncResponse{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Button sigIn = (Button)findViewById(R.id.email_sign_in_button);
+
+        TextView forgot = (TextView) findViewById(R.id.linkForgotPassword);
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, Recover_Password.class);
+                startActivity(intent);
+            }
+        });
+
 
         sigIn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {

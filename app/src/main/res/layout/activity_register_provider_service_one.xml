@@ -77,6 +77,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:src="@mipmap/perfil_usuario"
+                android:adjustViewBounds="true"
                 android:id="@+id/imagePerfil"
                 android:contentDescription="@string/image_perfil" />
 

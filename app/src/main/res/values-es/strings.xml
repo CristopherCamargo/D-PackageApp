@@ -124,4 +124,10 @@
     <string name="invalid_phone">Telefono Invalido</string>
     <string name="register_completed">Register Completed</string>
     <string name="invalid_email_exist">Este email ya existe</string>
+    <string name="select_image">Seleccionar Imagen</string>
+    <string name="uploadLicense">Upload License</string>
+    <string name="Color">Color</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="select_catetegory">Select Category</string>
+    <string name="select_model">Select Model</string>
 </resources>

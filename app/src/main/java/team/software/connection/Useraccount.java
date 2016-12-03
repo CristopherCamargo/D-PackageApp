@@ -2,7 +2,9 @@ package team.software.connection;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Useraccount{
+import java.io.Serializable;
+
+public class Useraccount implements Serializable{
     @SerializedName("first_name") String first_name;
     @SerializedName("last_name") String last_name;
     @SerializedName("email") String email;
@@ -14,6 +16,8 @@ public class Useraccount{
         this.email = em;
         this.password = pass;
     }
+
+    public Useraccount(){}
 
     public String getFirst_name() {
         return first_name;

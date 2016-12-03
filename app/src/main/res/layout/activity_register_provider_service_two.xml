@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:id="@+id/scrollView">
@@ -16,21 +17,26 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="team.software.d_packageapp.RegisterProviderServiceTwo">
 
-        <android.support.design.widget.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/til_licence">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/inputLicence"
-                android:hint="@string/ID_Licence"/>
-        </android.support.design.widget.TextInputLayout>
+            android:id="@+id/textUploadLicense"
+            android:text="@string/uploadLicense"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/textUploadLicense"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/photoLicence"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/imagen"
+            app:srcCompat="@mipmap/license_drive" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/til_licence"
+            android:layout_below="@+id/photoLicence"
             android:id="@+id/til_NumContact">
             <EditText
                 android:layout_width="match_parent"
