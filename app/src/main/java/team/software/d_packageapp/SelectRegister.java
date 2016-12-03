@@ -24,6 +24,11 @@ public class SelectRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_register);
         ButterKnife.bind(this);
+
+        if ( getIntent().getBooleanExtra("register", false)){
+            Intent intent = new Intent(this, Login.class);
+            startActivity(intent);
+        }
     }
 
     @OnClick(R.id.linkLogin)

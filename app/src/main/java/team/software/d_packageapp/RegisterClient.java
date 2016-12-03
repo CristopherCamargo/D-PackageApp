@@ -145,8 +145,11 @@ public class RegisterClient extends AppCompatActivity {
             public void onResponse(Call<PostDataRegisterClient> call, Response<PostDataRegisterClient> response) {
                 if (response.code() == 201) {
                     Toast.makeText(RegisterClient.this, getString(R.string.register_completed), Toast.LENGTH_SHORT).show();
-                    Intent login = new Intent(RegisterClient.this, Login.class);
-                    startActivity(login);
+                    Intent intent = new Intent(RegisterClient.this, SelectRegister.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("register", true);
+                    startActivity(intent);
+
                 } else {
                     try {
                         JSONObject jsonError = new JSONObject(response.errorBody().string());

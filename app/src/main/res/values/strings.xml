@@ -63,7 +63,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="year">Year</string>
     <string name="permission_rationale">Contacts permissions are needed for providing email completions.</string>
-    <string name="invalid_birtday">Invalid Birthday</string>
+    <string name="invalid_birtday">Invalid Birthday yyyy-mm-dd</string>
     <string name="invalid_idnumber">Invalid ID Number</string>
     <string name="invalid_address">Invalid Address</string>
     <string name="invalid_license">Invalid License</string>
