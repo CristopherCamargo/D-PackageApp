@@ -57,7 +57,7 @@ public final class ValidatorInput {
     }
 
     boolean isValidePlateNumber(String plateNumber) {
-        return plateNumber.length() == 6;
+        return plateNumber.length() == 7;
     }
 
     boolean isValidaEqualPassword(String newPassword, String verifyPassword) {
@@ -70,5 +70,9 @@ public final class ValidatorInput {
 
     boolean isValideBank(String selection, String stringToCompare) {
         return !selection.equals(stringToCompare);
+    }
+
+    boolean isValideIdNumber(String idNum) {
+        return idNum.length() > 6 && idNum.length() < 9;
     }
 }

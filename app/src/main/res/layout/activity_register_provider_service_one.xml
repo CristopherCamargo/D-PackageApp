@@ -22,109 +22,89 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="team.software.d_packageapp.RegisterProviderServiceOne">
 
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:id="@+id/container_image_login">
+            android:id="@+id/textImagePerfil"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="@string/image_perfil"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/facebook"
-                android:id="@+id/login_facebook"
-                android:contentDescription="@string/login_facebook"
-                android:padding="@dimen/activity_horizontal_margin"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textImagePerfil"
+            android:src="@mipmap/perfil_usuario"
+            android:adjustViewBounds="true"
+            android:id="@+id/imagePerfil"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/image_perfil" />
 
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/google"
-                android:id="@+id/login_google"
-                android:contentDescription="@string/login_google"
-                android:padding="@dimen/activity_horizontal_margin"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/twitter"
-                android:id="@+id/login_twitter"
-                android:contentDescription="@string/login_twitter"
-                android:padding="@dimen/activity_horizontal_margin" />
-        </LinearLayout>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imagePerfil"
+            android:id="@+id/til_ImagePerfil"
+            android:textColor="@color/colorError"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:id="@+id/separatorOne"
-            android:layout_below="@+id/container_image_login"
+            android:layout_below="@+id/til_ImagePerfil"
             android:background="@color/colorDivider"
             android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/separatorOne"
-            android:id="@+id/container_image_name"
+            android:layout_below="@id/separatorOne"
             android:orientation="horizontal"
-            android:layout_margin="@dimen/activity_horizontal_margin">
+            android:id="@+id/container_name"
+            android:baselineAligned="false">
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:src="@mipmap/perfil_usuario"
-                android:adjustViewBounds="true"
-                android:id="@+id/imagePerfil"
-                android:contentDescription="@string/image_perfil" />
-
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/container_name">
+                android:id="@+id/til_firstName">
 
-                <android.support.design.widget.TextInputLayout
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/til_firstName">
+                    android:inputType="textPersonName"
+                    android:hint="@string/first_name"
+                    android:ems="10"
+                    android:id="@+id/inputFirstName" />
+            </android.support.design.widget.TextInputLayout>
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:hint="@string/first_name"
-                        android:ems="10"
-                        android:id="@+id/inputFirstName" />
-                </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/til_lastName">
 
-                <android.support.design.widget.TextInputLayout
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/til_lastName">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:hint="@string/last_name"
-                        android:id="@+id/inputLastName" />
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:hint="@string/last_name"
+                    android:id="@+id/inputLastName" />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/container_image_name"
+            android:layout_below="@+id/container_name"
             android:id="@+id/container_id_date"
             android:baselineAligned="false">
 

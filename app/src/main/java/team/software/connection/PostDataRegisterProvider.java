@@ -1,5 +1,7 @@
 package team.software.connection;
 
+import android.net.Uri;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.io.File;
@@ -10,13 +12,29 @@ public class PostDataRegisterProvider implements Serializable{
     @SerializedName("birthdate") private String birthdate;
     @SerializedName("address") private String address;
     @SerializedName("identity_card") private String identity_card;
-//    @SerializedName("photo") private File photo;
-
+    @SerializedName("photo") private File photo;
+    @SerializedName("driver_license") private File driver_license;
     @SerializedName("useraccount") private Useraccount useraccount;
     @SerializedName("vehicle") private Vehicle vehicle;
 
     public PostDataRegisterProvider() {
 
+    }
+
+    public File getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String uri) {
+        this.photo = new File(uri);
+    }
+
+    public File getDriver_license() {
+        return driver_license;
+    }
+
+    public void setDriver_license(String uri) {
+        this.driver_license = new File(uri);
     }
 
     public String getPhone() {
