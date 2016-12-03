@@ -10,18 +10,26 @@ public class Vehicle implements Serializable{
     @SerializedName("model") private String model;
     @SerializedName("licensePlate") private String category;
     @SerializedName("color") private String color;
-//    @SerializedName("photo") File photo1;
+    @SerializedName("photo") File photo1;
 
     public Vehicle(String licensePlate, String model, String category, String color) {
         this.licensePlate = licensePlate;
         this.model = model;
         this.category = category;
         this.color = color;
-//        this.photo1 = photo1;
+        this.photo1 = photo1;
     }
 
     public Vehicle() {
 
+    }
+
+    public File getPhoto1() {
+        return photo1;
+    }
+
+    public void setPhoto1(String uri) {
+        this.photo1 = new File(uri);
     }
 
     public String getLicensePlate() {

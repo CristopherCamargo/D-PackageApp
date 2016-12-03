@@ -101,11 +101,11 @@
     <string name="type_package_text">Tipo de Paquete</string>
     <string name="insure_package_text">Valor del Paquete</string>
     <string name="car_number">Numero de Tarjeta</string>
-    <string name="expire_date">Expire Date</string>
+    <string name="expire_date">Fecha de Expiracion</string>
     <string name="name_on_card">Nombre de la Tarjeta</string>
-    <string name="card_code">Card Code</string>
+    <string name="card_code">Codigo de Tarjeta</string>
     <string name="add_card">Agregar Tarjeta</string>
-    <string name="select_cards">Select Cards</string>
+    <string name="select_cards">Seleccionar Tarjetas</string>
     <string name="visa">Tarjeta VISA</string>
     <string name="master">Tarjeta MasterCard</string>
     <string name="Tag">Tag</string>
@@ -125,9 +125,14 @@
     <string name="register_completed">Register Completed</string>
     <string name="invalid_email_exist">Este email ya existe</string>
     <string name="select_image">Seleccionar Imagen</string>
-    <string name="uploadLicense">Upload License</string>
+    <string name="uploadLicense">Subir Licencia</string>
     <string name="Color">Color</string>
-    <string name="forgot_password">Forgot Password</string>
-    <string name="select_catetegory">Select Category</string>
-    <string name="select_model">Select Model</string>
+    <string name="forgot_password">Olvido Contraseña</string>
+    <string name="select_catetegory">Seleccionar Categoria</string>
+    <string name="select_model">Seleccionar Modelo</string>
+    <string name="select_color">Seleccionar Color</string>
+    <string name="add_image">Agregar Imagen de Perfil</string>
+    <string name="add_image_license">Agregar Imagen de Licencia</string>
+    <string name="image_vehicle">Image of the Vehicle</string>
+    <string name="add_car">Agregar Carro</string>
 </resources>

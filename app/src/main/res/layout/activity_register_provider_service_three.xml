@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/scrollView">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/activity_register_provider_service_three"
         android:layout_width="match_parent"
@@ -15,28 +15,34 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
         tools:context="team.software.d_packageapp.RegisterProviderServiceThree">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/image_vehicle"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/image_vehicle_one"
+            android:id="@+id/image_vehicle_one"
+            app:srcCompat="@mipmap/car"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorError"
+            android:id="@+id/til_imageVehicle"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/image_vehicle"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/size_image_vehicle"
-                android:layout_margin="@dimen/activity_vertical_margin"
-                android:contentDescription="@string/image_vehicle_one"
-                android:id="@+id/image_vehicle_one"
-                app:srcCompat="@mipmap/car"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/image_vehicle"
             android:id="@+id/container_placa_ano"
             android:orientation="horizontal"
             android:baselineAligned="false">
@@ -50,7 +56,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:maxLength="6"
+                    android:maxLength="7"
                     android:hint="@string/placa"
                     android:id="@+id/inputPlaca"/>
 
@@ -80,13 +86,12 @@
             android:entries="@array/model"
             android:spinnerMode="dropdown"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_below="@id/container_placa_ano"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tilModel"
             android:textColor="@color/colorError"
-            android:layout_below="@id/spinnerModelo"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginStart="@dimen/activity_vertical_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"/>
@@ -98,14 +103,14 @@
             android:entries="@array/category"
             android:spinnerMode="dropdown"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_below="@id/tilModel"/>
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tilCategory"
             android:textColor="@color/colorError"
-            android:layout_below="@id/spinnerCategoria"
+
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginStart="@dimen/activity_vertical_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin" />
@@ -114,8 +119,7 @@
             android:text="@string/term_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tilCategory"
-            android:layout_centerHorizontal="true"
+
             android:id="@+id/checkBoxTermCondition"
             android:layout_margin="@dimen/activity_vertical_margin"/>
 
@@ -123,11 +127,11 @@
             android:text="@string/sign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/checkBoxTermCondition"
+
             android:id="@+id/buttonRegistrar"
             android:background="@color/colorPrimary"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </ScrollView>
 

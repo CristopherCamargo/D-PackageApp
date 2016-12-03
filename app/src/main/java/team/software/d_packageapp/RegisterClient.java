@@ -114,6 +114,16 @@ public class RegisterClient extends AppCompatActivity {
         }
     }
 
+    private API getInstance(){
+        String BASE_URL = "http://api.d-packagebackend.edwarbaron.me/";
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(MoshiConverterFactory.create())
+                .build();
+        API api = retrofit.create(API.class);
+        return api;
+    }
+
     private void launchRegisterClient() {
         Useraccount useraccount =
                 new Useraccount(
@@ -128,13 +138,8 @@ public class RegisterClient extends AppCompatActivity {
                         inputPhone.getText().toString()
                 );
 
-        String BASE_URL = "http://api.d-packagebackend.edwarbaron.me/";
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(MoshiConverterFactory.create())
-                .build();
-        API api = retrofit.create(API.class);
-        Call<PostDataRegisterClient> response = api.registerClient(postDataRegisterClient);
+
+        Call<PostDataRegisterClient> response = getInstance().registerClient(postDataRegisterClient);
         response.enqueue(new Callback<PostDataRegisterClient>() {
             @Override
             public void onResponse(Call<PostDataRegisterClient> call, Response<PostDataRegisterClient> response) {

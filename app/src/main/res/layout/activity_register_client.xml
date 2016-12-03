@@ -7,7 +7,6 @@
     android:id="@+id/scrollView">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context="team.software.d_packageapp.RegisterClient"
 
@@ -21,51 +20,9 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/container_image_login">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/facebook"
-                android:id="@+id/login_facebook"
-                android:contentDescription="@string/login_facebook"
-                android:padding="@dimen/activity_horizontal_margin"/>
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/google"
-                android:id="@+id/login_google"
-                android:contentDescription="@string/login_google"
-                android:padding="@dimen/activity_horizontal_margin"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/twitter"
-                android:id="@+id/login_twitter"
-                android:contentDescription="@string/login_twitter"
-                android:padding="@dimen/activity_horizontal_margin" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:id="@+id/separatorOne"
-            android:layout_below="@+id/container_image_login"
-            android:background="@color/colorDivider"
-            android:layout_marginBottom="10dp"/>
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/separatorOne"
             android:id="@+id/container_input_name"
             android:baselineAligned="false">
 
