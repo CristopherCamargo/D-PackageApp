@@ -27,14 +27,4 @@
             android:id="@+id/list_request_client" />
     </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="@dimen/iconRequest"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:fabSize="mini"
-        app:srcCompat="@mipmap/ic_client_select"
-        android:id="@+id/floatingActionButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 </RelativeLayout>
