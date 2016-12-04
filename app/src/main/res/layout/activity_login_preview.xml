@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -68,6 +69,13 @@
                     android:gravity="center_horizontal"
                     android:layout_margin="@dimen/activity_vertical_margin" />
 
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:id="@+id/next2"
+                    android:layout_gravity="end"
+                    app:srcCompat="@android:drawable/ic_media_play" />
 
         </LinearLayout>
 </ScrollView>

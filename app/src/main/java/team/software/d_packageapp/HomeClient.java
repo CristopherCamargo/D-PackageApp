@@ -1,5 +1,8 @@
 package team.software.d_packageapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HomeClient extends AppCompatActivity {
 
@@ -64,8 +68,26 @@ public class HomeClient extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.menu_cliente_edit_profile) {
+            Intent intent = new Intent(this, EditProfileCliente.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.menu_cliente_change_password) {
+            Intent intent = new Intent(this, ChangePassword.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.menu_cliente_logout) {
+            Intent intent = new Intent(this, SelectRegister.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+
+            SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("sesion_open",false);
+            editor.commit();
         }
 
         return super.onOptionsItemSelected(item);

@@ -1,10 +1,13 @@
 package team.software.d_packageapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,9 +28,26 @@ public class SelectRegister extends AppCompatActivity {
         setContentView(R.layout.activity_select_register);
         ButterKnife.bind(this);
 
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean("presentacion", false);
+        editor.commit();
+
         if ( getIntent().getBooleanExtra("register", false)){
             Intent intent = new Intent(this, Login.class);
             startActivity(intent);
+        }
+
+        if (sharedPref.getBoolean("sesion_open",false)) {
+            if (sharedPref.getString("type_user","").equals("client")) {
+                Intent intent = new Intent(this, HomeClient.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Intent intent = new Intent(this, HomePrestadorServicio.class);
+                startActivity(intent);
+                finish();
+            }
         }
     }
 

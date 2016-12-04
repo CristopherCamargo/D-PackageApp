@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -79,21 +82,25 @@ public class Login extends AppCompatActivity implements AsyncResponse{
         }
         else{
             //Save token
-            SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package",Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString("user_token", jsonObject.get("token"));
-            editor.commit();
+            editor.putBoolean("sesion_open", true);
 
-//            Change activity
-            if(jsonObject.get("type").compareTo("client")==0) {
-                Intent home_activity = new Intent(this, HomeClient.class);
-                startActivity(home_activity);
-            }else{
-                Intent home_activity = new Intent(this, HomePrestadorServicio.class);
-                startActivity(home_activity);
+            try {
+                JSONObject json = new JSONObject(output);
+                editor.putInt("user_id", Integer.parseInt(json.getJSONObject("useraccount").get("id").toString()));
+                editor.putString("type_user", json.get("type").toString());
+                editor.commit();
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-            //Activity finish
-            this.finish();
+
+//
+                Intent home_activity = new Intent(this, SelectRegister.class);
+                home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(home_activity);
+
         }
 
     }
