@@ -54,5 +54,12 @@
                     android:gravity="center_horizontal"
                     android:layout_margin="@dimen/activity_vertical_margin" />
 
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:id="@+id/next3"
+                    android:layout_gravity="end"
+                    app:srcCompat="@android:drawable/ic_media_play" />
         </LinearLayout>
 </ScrollView>

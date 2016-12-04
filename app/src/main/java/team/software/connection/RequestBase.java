@@ -8,6 +8,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
+import org.json.JSONException;
+
 import java.util.Map;
 
 /**
@@ -52,6 +54,10 @@ public class RequestBase extends AsyncTask<String,Long,String> {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonParser parser = new JsonParser();
         JsonElement element = parser.parse(response);
-        delegate.processFinish(gson.toJson(element));
+        try {
+            delegate.processFinish(gson.toJson(element));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }
