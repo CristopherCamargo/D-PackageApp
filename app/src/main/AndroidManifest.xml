@@ -104,12 +104,15 @@
         <activity android:name=".QualifyServiceProvider" />
         <activity
             android:name=".HomePrestadorServicio"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".ServiceProviderView"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ServiceProviderView" />
         <activity android:name=".ListRequestPackage" />
         <activity android:name="team.software.adapters.AdapterRequestPackage" />
-        <activity
-            android:name=".Tracing"/>
+        <activity android:name=".Tracing" />
+        <activity android:name="team.software.adapters.AdapterRequestInbox" />
+        <activity android:name=".ListRequestInbox" />
+        <activity android:name="team.software.adapters.AdapterRequestPS" />
+        <activity android:name=".ListRequestPS"></activity>
     </application>
 
 </manifest>

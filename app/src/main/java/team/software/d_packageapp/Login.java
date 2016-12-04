@@ -86,6 +86,7 @@ public class Login extends AppCompatActivity implements AsyncResponse{
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString("user_token", jsonObject.get("token"));
             editor.putBoolean("sesion_open", true);
+            editor.putBoolean("logout", false);
 
             try {
                 JSONObject json = new JSONObject(output);
