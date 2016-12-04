@@ -66,6 +66,7 @@
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in_short"
                 android:textStyle="bold" />
@@ -75,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/activity_vertical_margin"
                 android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
                 android:clickable="true"
                 android:id="@+id/linkForgotPassword"
                 android:text="@string/forgot_password"/>
