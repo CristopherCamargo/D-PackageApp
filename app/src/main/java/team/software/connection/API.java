@@ -53,4 +53,9 @@ public interface API {
     @POST("api/v1/user/{pk}/change_password/")
     Call<ResponseBody> changePassword(@Header("Authorization") String authorization, @Body PostDataChangePassword postDataChangePassword, @Path("pk") int pk);
 
+    @GET("api/v1/client/{pk}/")
+    Call<PostDataRegisterClient> getProfileClient(@Header("Authorization") String authorization, @Path("pk") int pk);
+
+    @POST("api/v1/logout/")
+    Call<ResponseBody> logout(@Header("Authorization") String authorization, @Body logout log);
 }

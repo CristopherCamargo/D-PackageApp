@@ -109,7 +109,7 @@ public class ChangePassword extends AppCompatActivity {
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("D-package",Context.MODE_PRIVATE);
         String token = sharedPreferences.getString("user_token",null);
         int id = sharedPreferences.getInt("user_id", 0);
-        Toast.makeText(this, "Token "+token, Toast.LENGTH_SHORT).show();
+
         Call<ResponseBody> response = getInstance().changePassword("Token "+token, changePassword, id);
         response.enqueue(new Callback<ResponseBody>() {
             @Override

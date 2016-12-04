@@ -54,6 +54,7 @@ public class EditProfileProviderService extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile_provider_service);
         ButterKnife.bind(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @OnClick(R.id.buttonSave)
@@ -117,6 +118,12 @@ public class EditProfileProviderService extends AppCompatActivity {
                 tilNumContact.setError(null);
             }
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
     }
 
     private void launchSaveProfile() {
