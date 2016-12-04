@@ -1,6 +1,8 @@
 package team.software.d_packageapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,6 +24,21 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private Class<?> launchWindow() {
-        return SelectRegister.class;
+
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
+
+        if (!sharedPref.getBoolean("presentacion", true)) {
+            return SelectRegister.class;
+        }
+
+        if (sharedPref.getBoolean("sesion_open", false)) {
+            if (sharedPref.getString("type_user", "").equals("client")) {
+                return HomeClient.class;
+            } else {
+                return HomePrestadorServicio.class;
+            }
+        }
+
+        return LoginPreview.class;
     }
 }

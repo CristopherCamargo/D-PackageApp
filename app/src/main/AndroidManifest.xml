@@ -82,7 +82,7 @@
         <activity android:name=".RegisterPaymentMethod" />
         <activity
             android:name=".ChangePassword"
-            android:label="@string/change_password" />
+            android:label="@string/change_password"/>
         <activity
             android:name=".RegisterBankDetails"
             android:label="@string/register_bank_details" />
