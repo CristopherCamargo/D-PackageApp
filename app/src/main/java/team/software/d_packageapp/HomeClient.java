@@ -1,5 +1,8 @@
 package team.software.d_packageapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
 import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -57,8 +60,29 @@ public class HomeClient extends AppCompatActivity implements TabLayout.OnTabSele
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.menu_cliente_edit_profile) {
+            Intent intent = new Intent(this, EditProfileCliente.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.menu_cliente_change_password) {
+            Intent intent = new Intent(this, ChangePassword.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.menu_cliente_logout) {
+
+            SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("sesion_open", false);
+            editor.putBoolean("logout", true);
+            editor.commit();
+
+            Intent intent = new Intent(this, SelectRegister.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+
         }
 
         return super.onOptionsItemSelected(item);

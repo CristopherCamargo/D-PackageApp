@@ -38,6 +38,11 @@ public class SelectRegister extends AppCompatActivity {
             startActivity(intent);
         }
 
+        if ( sharedPref.getBoolean("logout", false)){
+            Intent intent = new Intent(this, Login.class);
+            startActivity(intent);
+        }
+
         if (sharedPref.getBoolean("sesion_open",false)) {
             if (sharedPref.getString("type_user","").equals("client")) {
                 Intent intent = new Intent(this, HomeClient.class);
