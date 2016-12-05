@@ -20,6 +20,7 @@ public class RequestBase extends AsyncTask<String,Long,String> {
 
     public static final String TAG = "com.team.software";
     public AsyncResponse delegate = null;
+    public String TokenAuthorization;
     public int typeRequest;
     public Map<String, String> data;
 
@@ -28,8 +29,14 @@ public class RequestBase extends AsyncTask<String,Long,String> {
             String response = null;
 
             if(typeRequest == 0){ //GET
-                response = HttpRequest.get(request[0]).accept("application/json")
-                    .body();
+                if(TokenAuthorization.isEmpty()) {
+                    response = HttpRequest.get(request[0]).accept("application/json")
+                            .body();
+                }
+                else{
+                    response = HttpRequest.get(request[0]).accept("application/json").authorization(this.TokenAuthorization)
+                            .body();
+                }
             }
             if(typeRequest == 1){ //POST
                 response = HttpRequest.post(request[0]).form(data).body();

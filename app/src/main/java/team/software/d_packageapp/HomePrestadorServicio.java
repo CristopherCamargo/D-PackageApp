@@ -8,7 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import team.software.adapters.TabProviderServiceAdapter;
-import team.software.connection.GetData;
+import team.software.connection.GetDataPackageType;
+import team.software.connection.GetDataShipmentType;
 
 public class HomePrestadorServicio extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
@@ -35,7 +36,8 @@ public class HomePrestadorServicio extends AppCompatActivity implements TabLayou
         //Adding onTabSelectedListener to swipe views
         tabLayout.setOnTabSelectedListener(this);
 
-        GetData data = new GetData(this);
+        new GetDataPackageType(this);
+        new GetDataShipmentType(this);
     }
 
     @Override
