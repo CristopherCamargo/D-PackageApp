@@ -9,6 +9,6 @@ import org.json.JSONException;
 public class GetDataClient implements AsyncResponse {
     @Override
     public void processFinish(String output) throws JSONException {
-        
+
     }
 }
