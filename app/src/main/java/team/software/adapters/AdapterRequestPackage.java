@@ -1,10 +1,12 @@
 package team.software.adapters;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -34,13 +36,20 @@ public class AdapterRequestPackage extends ArrayAdapter<RequestPackageModel> {
         TextView provider_service = (TextView) convertView.findViewById(R.id.provider_service_request_client);
         TextView type = (TextView) convertView.findViewById(R.id.type_request_package);
         TextView status = (TextView) convertView.findViewById(R.id.status_request);
+        ImageView image = (ImageView) convertView.findViewById(R.id.image_request_client);
 
-        identificador.setText(requestItem.getIndentificador());
-        tag.setText(requestItem.getTag());
-        destine.setText(requestItem.getDestine());
-        provider_service.setText(requestItem.getProvider_service());
-        type.setText(requestItem.getType());
-        status.setText(requestItem.getStatus());
+        identificador.setText(String.valueOf(requestItem.id));
+        tag.setText(requestItem.tags);
+        destine.setText(requestItem.destination);
+        provider_service.setText("nada");
+        SharedPreferences sharedPref = getContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
+        status.setText(sharedPref.getString("status_request_"+requestItem.status,"null"));
+        type.setText(sharedPref.getString("type_shipment_"+requestItem.packagetype,"null"));
+
+        if(requestItem.packagetype==1)
+            image.setImageResource(R.mipmap.ic_express_request);
+        else
+            image.setImageResource(R.mipmap.ic_standard_request);
 
         return convertView;
     }

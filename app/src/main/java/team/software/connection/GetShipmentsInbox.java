@@ -11,22 +11,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
-import team.software.adapters.AdapterRequestPS;
-import team.software.d_packageapp.ListRequestPS;
+import team.software.adapters.AdapterRequestInbox;
+import team.software.d_packageapp.ListRequestInbox;
 import team.software.models.RequestPackageModel;
 
 /**
- * Created by Carlos on 12/4/16.
+ * Created by Caceres on 06-12-2016.
  */
 
-public class GetShipmentsPS implements AsyncResponse{
+public class GetShipmentsInbox implements AsyncResponse{
     private Context context;
-    private ListRequestPS object;
+    private ListRequestInbox object;
 
-    public GetShipmentsPS(Context context,ListRequestPS object) {
+    public GetShipmentsInbox(Context context,ListRequestInbox object){
         this.context = context;
         this.object = object;
-        String urlRequest = new String("http://api.d-packagebackend.edwarbaron.me/api/v1/shipment/");
+        String urlRequest = new String("http://api.d-packagebackend.edwarbaron.me/api/v1/inbox_shipment/");
         RequestBase example = new RequestBase();
         example.delegate = this;
         // Especificar el tipo de solicitud: 0 GET, 1 POST, 2 DELETE, 3 PUT
@@ -42,8 +42,7 @@ public class GetShipmentsPS implements AsyncResponse{
         Map<String, String> jsonObject = gson.fromJson(output, Map.class);
         String element = gson.toJson(jsonObject.get("results"));
         RequestPackageModel[] data= gson.fromJson(element,RequestPackageModel[].class);
-        this.object.request = new AdapterRequestPS(this.object.getContext(),new ArrayList<RequestPackageModel>(Arrays.asList(data)));
+        this.object.request = new AdapterRequestInbox(this.object.getContext(),new ArrayList<RequestPackageModel>(Arrays.asList(data)));
         this.object.listView.setAdapter(this.object.request);
     }
-
 }

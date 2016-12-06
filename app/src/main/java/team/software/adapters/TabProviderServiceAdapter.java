@@ -26,9 +26,9 @@ public class TabProviderServiceAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new ListRequestInbox();
-            case 1:
                 return new ListRequestPS();
+            case 1:
+                return new ListRequestInbox();
             case 2:
                 return new ListRequestInbox();
             case 3:

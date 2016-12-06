@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import team.software.adapters.TabProviderServiceAdapter;
 import team.software.connection.GetDataPackageType;
 import team.software.connection.GetDataShipmentType;
+import team.software.connection.GetDataStatus;
 
 public class HomePrestadorServicio extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
@@ -38,6 +39,7 @@ public class HomePrestadorServicio extends AppCompatActivity implements TabLayou
 
         new GetDataPackageType(this);
         new GetDataShipmentType(this);
+        new GetDataStatus(this);
     }
 
     @Override

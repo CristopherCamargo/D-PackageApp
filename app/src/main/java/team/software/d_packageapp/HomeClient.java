@@ -15,6 +15,9 @@ import android.view.MenuItem;
 
 
 import team.software.adapters.TabHomeClientAdapter;
+import team.software.connection.GetDataPackageType;
+import team.software.connection.GetDataShipmentType;
+import team.software.connection.GetDataStatus;
 
 public class HomeClient extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
@@ -43,6 +46,10 @@ public class HomeClient extends AppCompatActivity implements TabLayout.OnTabSele
 
         //Adding onTabSelectedListener to swipe views
         tabLayout.setOnTabSelectedListener(this);
+
+        new GetDataPackageType(this);
+        new GetDataShipmentType(this);
+        new GetDataStatus(this);
     }
 
     @Override

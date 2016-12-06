@@ -1,73 +1,38 @@
 package team.software.models;
 
-import team.software.d_packageapp.RequestPackage;
-
 /**
- * Created by Cristopher on 11/30/16.
+ * Created by Carlos on 12/4/16.
  */
-
+import com.google.gson.annotations.SerializedName;
 public class RequestPackageModel {
-    private String indentificador;
-    private String type;
-    private String tag;
-    private String destine;
-    private String provider_service;
-    private String status;
-
-    public RequestPackageModel(String r_identificador,String r_type,String r_tag,String r_destine,String r_provider_service,String r_status){
-        this.setIndentificador(r_identificador);
-        this.setDestine(r_destine);
-        this.setProvider_service(r_provider_service);
-        this.setType(r_type);
-        this.setTag(r_tag);
-        this.setStatus(r_status);
-    }
-
-    public String getDestine() {
-        return destine;
-    }
-
-    public String getIndentificador() {
-        return indentificador;
-    }
-
-    public String getProvider_service() {
-        return provider_service;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public String getTag() {
-        return tag;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setDestine(String destine) {
-        this.destine = destine;
-    }
-
-    public void setIndentificador(String indentificador) {
-        this.indentificador = indentificador;
-    }
-
-    public void setProvider_service(String provider_service) {
-        this.provider_service = provider_service;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
+    @SerializedName("id")
+    public int id;
+    @SerializedName("client")
+    public ClientModel client;
+    @SerializedName("service")
+    public int service;
+    @SerializedName("shipmenttype")
+    public int shipmenttype;
+    @SerializedName("packagetype")
+    public int packagetype;
+    @SerializedName("photo1")
+    public String photo1;
+    @SerializedName("photo2")
+    public String photo2;
+    @SerializedName("photo3")
+    public String photo3;
+    @SerializedName("tags")
+    public String tags;
+    @SerializedName("receiver")
+    public String receiver;
+    @SerializedName("origin")
+    public String origin;
+    @SerializedName("destination")
+    public String destination;
+    @SerializedName("insured")
+    public boolean insured;
+    @SerializedName("price")
+    public double price;
+    @SerializedName("status")
+    public int status;
 }

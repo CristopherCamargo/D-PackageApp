@@ -30,7 +30,7 @@ public class RequestBase extends AsyncTask<String,Long,String> {
 
             if(typeRequest == 0){ //GET
                 if(this.TokenAuthorization!=null) {
-                    response = HttpRequest.get(request[0]).accept("application/json").authorization(this.TokenAuthorization)
+                    response = HttpRequest.get(request[0]).accept("application/json").authorization("token "+this.TokenAuthorization)
                             .body();
                 }
                 else{

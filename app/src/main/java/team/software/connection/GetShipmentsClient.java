@@ -11,19 +11,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
-import team.software.adapters.AdapterRequestPS;
-import team.software.d_packageapp.ListRequestPS;
+import team.software.adapters.AdapterRequestPackage;
+import team.software.d_packageapp.ListRequestPackage;
 import team.software.models.RequestPackageModel;
 
+
 /**
- * Created by Carlos on 12/4/16.
+ * Created by Caceres on 06-12-2016.
  */
 
-public class GetShipmentsPS implements AsyncResponse{
+public class GetShipmentsClient implements AsyncResponse{
     private Context context;
-    private ListRequestPS object;
+    private ListRequestPackage object;
 
-    public GetShipmentsPS(Context context,ListRequestPS object) {
+    public GetShipmentsClient(Context context,ListRequestPackage object){
         this.context = context;
         this.object = object;
         String urlRequest = new String("http://api.d-packagebackend.edwarbaron.me/api/v1/shipment/");
@@ -35,15 +36,13 @@ public class GetShipmentsPS implements AsyncResponse{
         example.TokenAuthorization = sharedPref.getString("user_token",null);
         example.execute(urlRequest);
     }
-
     @Override
     public void processFinish(String output) throws JSONException {
         Gson gson = new Gson();
         Map<String, String> jsonObject = gson.fromJson(output, Map.class);
         String element = gson.toJson(jsonObject.get("results"));
         RequestPackageModel[] data= gson.fromJson(element,RequestPackageModel[].class);
-        this.object.request = new AdapterRequestPS(this.object.getContext(),new ArrayList<RequestPackageModel>(Arrays.asList(data)));
+        this.object.request = new AdapterRequestPackage(this.object.getContext(),new ArrayList<RequestPackageModel>(Arrays.asList(data)));
         this.object.listView.setAdapter(this.object.request);
     }
-
 }

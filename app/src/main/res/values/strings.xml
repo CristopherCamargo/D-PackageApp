@@ -137,4 +137,5 @@
     <string name="image_vehicle">Image of the Vehicle</string>
     <string name="add_car">Add Car</string>
     <string name="logout">Logout</string>
+    <string name="time_out_request">Time out request</string>
 </resources>
