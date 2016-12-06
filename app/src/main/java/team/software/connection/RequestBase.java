@@ -29,12 +29,12 @@ public class RequestBase extends AsyncTask<String,Long,String> {
             String response = null;
 
             if(typeRequest == 0){ //GET
-                if(TokenAuthorization.isEmpty()) {
-                    response = HttpRequest.get(request[0]).accept("application/json")
+                if(this.TokenAuthorization!=null) {
+                    response = HttpRequest.get(request[0]).accept("application/json").authorization(this.TokenAuthorization)
                             .body();
                 }
                 else{
-                    response = HttpRequest.get(request[0]).accept("application/json").authorization(this.TokenAuthorization)
+                    response = HttpRequest.get(request[0]).accept("application/json")
                             .body();
                 }
             }

@@ -2,6 +2,7 @@ package team.software.connection;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -33,6 +34,7 @@ public class GetShipmentsPS implements AsyncResponse {
 
     @Override
     public void processFinish(String output) throws JSONException {
+        Log.i("com.prueba",output);
         Gson gson = new Gson();
         Map<String, String> jsonObject = gson.fromJson(output, Map.class);
         String element = gson.toJson(jsonObject.get("results"));

@@ -8,7 +8,7 @@ public class RequestPSPackageModel {
     @SerializedName("id")
     public int id;
     @SerializedName("client")
-    public int client;
+    public String client;
     @SerializedName("service")
     public int service;
     @SerializedName("shipmenttype")
