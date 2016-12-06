@@ -101,7 +101,7 @@
     <string name="type_package_text">Tipo de Paquete</string>
     <string name="insure_package_text">Valor del Paquete</string>
     <string name="car_number">Numero de Tarjeta</string>
-    <string name="expire_date">Fecha de Expiracion</string>
+    <string name="expire_date">Fecha de Expiracion MM/YY</string>
     <string name="name_on_card">Nombre de la Tarjeta</string>
     <string name="card_code">Codigo de Tarjeta</string>
     <string name="add_card">Agregar Tarjeta</string>
@@ -137,4 +137,8 @@
     <string name="add_car">Agregar Carro</string>
     <string name="logout">Salir</string>
     <string name="status_text">Estatus</string>
+    <string name="invalid_code_card">Código Inválido</string>
+    <string name="invalid_number_card">Numero de Tarjeta Invalido</string>
+    <string name="invalid_expire_date">Fecha Inválida</string>
+    <string name="manage_cards">Gestionar Tarjetas</string>
 </resources>

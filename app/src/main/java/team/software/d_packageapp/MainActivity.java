@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity{
 
     private Class<?> launchWindow() {
 
+
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
 
         if (!sharedPref.getBoolean("presentacion", true)) {

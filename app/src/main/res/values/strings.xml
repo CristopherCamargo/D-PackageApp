@@ -101,7 +101,7 @@
     <string name="type_package_text">Type Package</string>
     <string name="insure_package_text">Value Insure Package</string>
     <string name="car_number">Car Number</string>
-    <string name="expire_date">Expire Date</string>
+    <string name="expire_date">Expire Date MM/YY</string>
     <string name="name_on_card">Name On Card</string>
     <string name="card_code">Card Code</string>
     <string name="card_number">Card Number</string>
@@ -137,4 +137,9 @@
     <string name="image_vehicle">Image of the Vehicle</string>
     <string name="add_car">Add Car</string>
     <string name="logout">Logout</string>
+    <string name="invalid_code_card">Invalid Code Card</string>
+    <string name="invalid_number_card">Invalid Number Card</string>
+    <string name="invalid_expire_date">Invalid Date</string>
+    <string name="manage_cards">Manage Card</string>
+    <string name="title_activity_floataction">floataction</string>
 </resources>

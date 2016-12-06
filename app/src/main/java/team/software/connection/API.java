@@ -58,4 +58,7 @@ public interface API {
 
     @POST("api/v1/logout/")
     Call<ResponseBody> logout(@Header("Authorization") String authorization, @Body logout log);
+
+    @POST("api/v1/card/")
+    Call<ResponseBody> SaveToken(@Header("Authorization") String authorization,@Body StripeToken token);
 }
