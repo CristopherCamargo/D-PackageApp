@@ -64,22 +64,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:text="@string/standar_package"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/ic_media_ff"
-                    android:id="@+id/imageButton"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/imagen" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/ic_media_play"
-                    android:id="@+id/imageButton2"
-                    android:contentDescription="@string/imagen"
+                    android:id="@+id/standar_package"
+                    android:checked="true"
                     android:layout_weight="1" />
 
+                <RadioButton
+                    android:text="@string/express_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/express_package"
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <TextView
@@ -94,7 +92,21 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText" />
+                android:id="@+id/tag_package" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/receiver"
+                android:text="@string/receiver"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/receiver_text" />
 
             <TextView
                 android:text="@string/photos_package"
@@ -107,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@android:drawable/ic_input_add"
-                android:id="@+id/imageButton3"
+                android:id="@+id/load_photo_package"
                 android:contentDescription="@string/imagen" />
 
             <TextView
@@ -115,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView19"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:text="@string/destine_text" />
+                android:text="@string/destination_package" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -135,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText2"
+                    android:id="@+id/destination_package_text"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -164,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText3"
+                    android:id="@+id/origin_package_text"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -178,7 +190,28 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner" />
+                android:id="@+id/spinner_package" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="@string/insure_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Insure_text_view"
+                    android:layout_weight="1"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_insure"
+                    android:layout_weight="0.70" />
+            </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -207,15 +240,40 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
-                    android:id="@+id/editText4" />
+                    android:id="@+id/editText4"
+                    android:enabled="false"/>
+
             </LinearLayout>
 
-            <Button
-                android:text="@string/new_request_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/newRequest"
-                android:layout_gravity="center_horizontal" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:text="@string/calculate_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/calculate_price"
+                        android:layout_weight="1"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:text="@string/new_request_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/newRequest"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
