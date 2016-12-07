@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.BindView;
@@ -58,7 +60,17 @@ public class Recover_Password extends AppCompatActivity {
         response.enqueue(new Callback<Useraccount>() {
             @Override
             public void onResponse(Call<Useraccount> call, Response<Useraccount> response) {
-
+                if (response.code() == 204) {
+                    Toast.makeText(Recover_Password.this, "Correo Enviado", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    Toast.makeText(Recover_Password.this, "Lo sentimos hubo un problema", Toast.LENGTH_SHORT).show();
+                    try {
+                        Log.e("Error", response.errorBody().string());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
 
             @Override

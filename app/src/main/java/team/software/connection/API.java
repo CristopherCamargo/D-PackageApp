@@ -41,7 +41,7 @@ public interface API {
             @Part("vehicle.color") RequestBody vehicle_color,
             @Part MultipartBody.Part photo1);
 
-    @POST("api/v1/user/forgot_password")
+    @POST("api/v1/user/forgot_password/")
     Call<Useraccount> forgotPassword(@Body Useraccount useraccount);
 
     @GET("api/v1/getvehiclecategory/")
@@ -61,4 +61,7 @@ public interface API {
 
     @POST("api/v1/card/")
     Call<ResponseBody> SaveToken(@Header("Authorization") String authorization,@Body StripeToken token);
+
+    @GET("api/v1/card/")
+    Call<GetDataCards> getCards(@Header("Authorization") String authorization);
 }
