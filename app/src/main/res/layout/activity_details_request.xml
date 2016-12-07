@@ -47,7 +47,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/textView48"
                     android:layout_weight="0.05"
-                    android:gravity="right" />
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -81,7 +81,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/car"
+                app:srcCompat="@mipmap/perfil_usuario"
                 android:id="@+id/imageView17"
                 android:layout_weight="1" />
 
@@ -119,7 +119,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/car"
+                app:srcCompat="@mipmap/perfil_usuario"
                 android:id="@+id/imageViewC"
                 android:layout_weight="1" />
 
