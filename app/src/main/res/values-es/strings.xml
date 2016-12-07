@@ -97,7 +97,7 @@
     <string name="currency_symbol">$</string>
     <string name="photos_package">Fotos del Paquete</string>
     <string name="destine_text">Destine</string>
-    <string name="origin_text">Origen</string>
+    <string name="origin_text">Origen Paquete</string>
     <string name="type_package_text">Tipo de Paquete</string>
     <string name="insure_package_text">Valor del Paquete</string>
     <string name="car_number">Numero de Tarjeta</string>
@@ -137,4 +137,11 @@
     <string name="add_car">Agregar Carro</string>
     <string name="logout">Salir</string>
     <string name="status_text">Estatus</string>
+    <string name="standar_package">Standar Package</string>
+    <string name="express_package">Express Package</string>
+    <string name="standar_package_b">Standar Package</string>
+    <string name="destination_package">Destination Package</string>
+    <string name="calculate_price">Calculate</string>
+    <string name="insure_text_view">Insure your package</string>
+    <string name="receiver">Receiver</string>
 </resources>

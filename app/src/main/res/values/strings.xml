@@ -97,7 +97,7 @@
     <string name="currency_symbol">$</string>
     <string name="photos_package">Photos Package</string>
     <string name="destine_text">Destine</string>
-    <string name="origin_text">Origin</string>
+    <string name="origin_text">Origin Package</string>
     <string name="type_package_text">Type Package</string>
     <string name="insure_package_text">Value Insure Package</string>
     <string name="car_number">Car Number</string>
@@ -137,4 +137,11 @@
     <string name="image_vehicle">Image of the Vehicle</string>
     <string name="add_car">Add Car</string>
     <string name="logout">Logout</string>
+    <string name="standar_package">Standar Package</string>
+    <string name="express_package">Express Package</string>
+    <string name="standar_package_b">Standar Package</string>
+    <string name="destination_package">Destination Package</string>
+    <string name="calculate_price">Calculate</string>
+    <string name="insure_text_view">Insure your package</string>
+    <string name="receiver">Receiver</string>
 </resources>
