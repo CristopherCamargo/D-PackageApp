@@ -10,24 +10,24 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import team.software.adapters.AdapterRequestPackage;
+import team.software.connection.GetShipmentsClient;
 import team.software.models.RequestPackageModel;
 
 public class ListRequestPackage extends Fragment {
+
+    private View rootView;
+    public AdapterRequestPackage request;
+    public ListView listView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.activity_list_request_package, container, false);
-
-        RequestPackageModel model = new RequestPackageModel("A000","Express","Televisor","Peribeca","Juan","En camino");
-
-        ListView listView = (ListView) rootView.findViewById(R.id.list_request_client);
-        ArrayList<RequestPackageModel> requestItems = new ArrayList<RequestPackageModel>();
-        requestItems.add(model);
-        requestItems.add(model);
-        AdapterRequestPackage requestPackage = new AdapterRequestPackage(rootView.getContext(),requestItems);
-        listView.setAdapter(requestPackage);
+        rootView = inflater.inflate(R.layout.activity_list_request_package, container, false);
+        listView = (ListView) rootView.findViewById(R.id.list_request_client);
+        new GetShipmentsClient(this.getContext(),this);
+        request = new AdapterRequestPackage(rootView.getContext(),new ArrayList<RequestPackageModel>());
+        listView.setAdapter(request);
 
         return rootView;
     }

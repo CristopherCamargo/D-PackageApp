@@ -148,4 +148,6 @@
     <string name="calculate_price">Calculate</string>
     <string name="insure_text_view">Insure your package</string>
     <string name="receiver">Receiver</string>
+    <string name="text_details_request">Request Detail</string>
+    <string name="text_receptor">Recibe</string>
 </resources>

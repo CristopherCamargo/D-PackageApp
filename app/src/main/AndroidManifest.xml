@@ -115,7 +115,7 @@
         <activity android:name=".ListRequestInbox" />
         <activity android:name="team.software.adapters.AdapterRequestPS" />
         <activity android:name=".ListRequestPS" />
-
+        <activity android:name=".DetailsRequest"></activity>
     </application>
 
 </manifest>

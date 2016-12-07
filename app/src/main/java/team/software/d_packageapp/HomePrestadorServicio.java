@@ -23,6 +23,9 @@ import retrofit2.converter.moshi.MoshiConverterFactory;
 import team.software.adapters.TabProviderServiceAdapter;
 import team.software.connection.API;
 import team.software.connection.logout;
+import team.software.connection.GetDataPackageType;
+import team.software.connection.GetDataShipmentType;
+import team.software.connection.GetDataStatus;
 
 public class HomePrestadorServicio extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
@@ -49,6 +52,10 @@ public class HomePrestadorServicio extends AppCompatActivity implements TabLayou
 
         //Adding onTabSelectedListener to swipe views
         tabLayout.setOnTabSelectedListener(this);
+
+        new GetDataPackageType(this);
+        new GetDataShipmentType(this);
+        new GetDataStatus(this);
     }
 
     @Override

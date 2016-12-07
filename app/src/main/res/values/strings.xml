@@ -149,4 +149,13 @@
     <string name="calculate_price">Calculate</string>
     <string name="insure_text_view">Insure your package</string>
     <string name="receiver">Receiver</string>
+    <string name="time_out_request">Time out request</string>
+    <string name="text_details_request">Request Detail</string>
+    <string name="text_receptor">Recibe</string>
+    <string name="error_conection">Error in the connection</string>
+    <string name="status_3_client">Se ha retirado</string>
+    <string name="status_4_client">Se ha entregado</string>
+    <string name="status_2_provider">Lo llevo!</string>
+    <string name="status_3_provider">Lo he retirado</string>
+    <string name="status_4_provider">Lo he entregado</string>
 </resources>

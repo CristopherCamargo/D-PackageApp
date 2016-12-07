@@ -96,13 +96,20 @@ public class Login extends AppCompatActivity implements AsyncResponse{
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-//
-                Intent home_activity = new Intent(this, SelectRegister.class);
+            if(jsonObject.get("type").compareTo("client")==0) {
+                Intent home_activity = new Intent(this, HomeClient.class);
                 home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(home_activity);
-
+            }
+            else{
+                Intent home_activity = new Intent(this, HomePrestadorServicio.class);
+                home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(home_activity);
+            }
         }
+    }
 
+    private void getAllData(){
+        
     }
 }
