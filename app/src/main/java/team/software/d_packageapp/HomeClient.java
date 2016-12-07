@@ -90,6 +90,11 @@ public class HomeClient extends AppCompatActivity implements TabLayout.OnTabSele
             startActivity(intent);
         }
 
+        if (id == R.id.menu_cliente_manage_cards) {
+            Intent intent = new Intent(this, PaymentCardManagement.class);
+            startActivity(intent);
+        }
+
         if (id == R.id.menu_cliente_change_password) {
             Intent intent = new Intent(this, ChangePassword.class);
             startActivity(intent);

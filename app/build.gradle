@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -24,22 +25,25 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //    Raidy
+    compile('com.stripe:stripe-android:+') {
+        exclude module: 'gson'
+    }
+
+
+
+
+
+
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'com.google.android.gms:play-services-maps:10.0.1'
-    //    Raidy
     compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-moshi:2.1.0'
-
     compile 'net.margaritov.preference.colorpicker.ColorPickerPreference:ColorPickerPreference:1.0.0'
-
-
-
-
     testCompile 'junit:junit:4.12'
-
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }

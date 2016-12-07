@@ -75,4 +75,23 @@ public final class ValidatorInput {
     boolean isValideIdNumber(String idNum) {
         return idNum.length() > 6 && idNum.length() < 9;
     }
+
+    boolean isValideNumberCard(String number) {
+        return number.length() == 16;
+    }
+
+    boolean isValideCodeCard(String number) {
+        return number.length() == 3;
+    }
+
+    boolean isValideExpireDate(String expire) {
+        Pattern patron = Pattern.compile("[0-9]{2}/[0-9]{2}");
+        if (patron.matcher(expire).matches()) {
+
+            int mes = Integer.parseInt(expire.substring(0, 2));
+            int year = Integer.parseInt(expire.substring(3, expire.length()));
+            return mes > 0 && mes < 13 && year > 15;
+        }
+        return false;
+    }
 }
