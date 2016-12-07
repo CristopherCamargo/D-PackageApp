@@ -69,12 +69,10 @@
         </activity>
         <activity
             android:name=".RegisterProviderServiceTwo"
-            android:label="@string/step_two"/>
-
+            android:label="@string/step_two" />
         <activity
             android:name=".RegisterProviderServiceThree"
-            android:label="@string/step_three"/>
-
+            android:label="@string/step_three" />
         <activity
             android:name=".HomeClient"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -82,7 +80,7 @@
         <activity android:name=".RegisterPaymentMethod" />
         <activity
             android:name=".ChangePassword"
-            android:label="@string/change_password"/>
+            android:label="@string/change_password" />
         <activity
             android:name=".RegisterBankDetails"
             android:label="@string/register_bank_details" />
@@ -112,7 +110,8 @@
         <activity android:name="team.software.adapters.AdapterRequestInbox" />
         <activity android:name=".ListRequestInbox" />
         <activity android:name="team.software.adapters.AdapterRequestPS" />
-        <activity android:name=".ListRequestPS"></activity>
+        <activity android:name=".ListRequestPS" />
+        <activity android:name=".DetailsRequest"></activity>
     </application>
 
 </manifest>

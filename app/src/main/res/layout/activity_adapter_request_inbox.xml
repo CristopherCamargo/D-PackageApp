@@ -17,8 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/Layout"
-            android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:layout_weight="1">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -41,8 +41,8 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="1dp">
+            android:elevation="1dp"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -113,17 +113,30 @@
                     android:id="@+id/tag_request_inbox_a"
                     android:layout_weight="1"
                     android:textSize="10sp" />
+
             </LinearLayout>
 
         </LinearLayout>
 
-        <TextView
-            android:text="TextView"
-            android:layout_width="@android:dimen/app_icon_size"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/cost_request_inbox_a"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_weight="1" />
+            android:layout_weight="1">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/cost_request_inbox_a"
+                android:gravity="center_vertical|center_horizontal" />
+
+            <TextView
+                android:text="@string/currency_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView28" />
+        </LinearLayout>
 
     </LinearLayout>
 

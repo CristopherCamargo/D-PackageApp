@@ -1,6 +1,7 @@
 package team.software.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +10,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
+import team.software.d_packageapp.DetailsRequest;
 import team.software.d_packageapp.R;
 import team.software.models.RequestPackageModel;
 
@@ -24,7 +28,7 @@ public class AdapterRequestPackage extends ArrayAdapter<RequestPackageModel> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        RequestPackageModel requestItem = getItem(position);
+        final RequestPackageModel requestItem = getItem(position);
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_adapter_request_package, parent, false);
@@ -50,6 +54,17 @@ public class AdapterRequestPackage extends ArrayAdapter<RequestPackageModel> {
             image.setImageResource(R.mipmap.ic_express_request);
         else
             image.setImageResource(R.mipmap.ic_standard_request);
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),DetailsRequest.class);
+                Gson gson = new Gson();
+                String requestObject = gson.toJson(requestItem);
+                intent.putExtra("requestObject",requestObject);
+                getContext().startActivity(intent);
+            }
+        });
 
         return convertView;
     }

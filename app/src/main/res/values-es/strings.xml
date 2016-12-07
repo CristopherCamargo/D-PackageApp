@@ -137,4 +137,6 @@
     <string name="add_car">Agregar Carro</string>
     <string name="logout">Salir</string>
     <string name="status_text">Estatus</string>
+    <string name="text_details_request">Request Detail</string>
+    <string name="text_receptor">Recibe</string>
 </resources>

@@ -10,7 +10,7 @@ public class RequestPackageModel {
     @SerializedName("client")
     public ClientModel client;
     @SerializedName("service")
-    public int service;
+    public ProviderModel service;
     @SerializedName("shipmenttype")
     public int shipmenttype;
     @SerializedName("packagetype")

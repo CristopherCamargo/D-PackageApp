@@ -39,7 +39,11 @@ public class RequestBase extends AsyncTask<String,Long,String> {
                 }
             }
             if(typeRequest == 1){ //POST
-                response = HttpRequest.post(request[0]).form(data).body();
+                if(this.TokenAuthorization!=null) {
+                    response = HttpRequest.post(request[0]).authorization("token "+this.TokenAuthorization).form(data).body();
+                }else {
+                    response = HttpRequest.post(request[0]).form(data).body();
+                }
             }
             if(typeRequest == 2){ //DELETE
                 response = HttpRequest.delete(request[0]).accept("application/json")

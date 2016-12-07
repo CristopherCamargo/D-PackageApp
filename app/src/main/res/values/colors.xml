@@ -8,5 +8,5 @@
     <color name="colorSecondaryText">#757575</color>
     <color name="colorIcons">#212121</color>
     <color name="colorError">#ED4043</color>
-    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorDivider">#bdbdbd</color>
 </resources>
