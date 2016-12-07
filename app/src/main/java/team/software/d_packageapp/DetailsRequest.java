@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 
 import team.software.connection.PostAcceptRequest;
+import team.software.connection.PostUpdateRequest;
 import team.software.models.RequestPackageModel;
 
 public class DetailsRequest extends AppCompatActivity {
@@ -99,7 +100,7 @@ public class DetailsRequest extends AppCompatActivity {
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            new PostAcceptRequest(getApplicationContext(),(request.status+1),request.id);
+                            new PostUpdateRequest(getApplicationContext(),(request.status+1),request.id);
                         }
                     });
                     break;
@@ -123,7 +124,7 @@ public class DetailsRequest extends AppCompatActivity {
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            new PostAcceptRequest(getApplicationContext(),(request.status+1),request.id);
+                            new PostUpdateRequest(getApplicationContext(),(request.status+1),request.id);
                         }
                     });
                     break;

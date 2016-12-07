@@ -10,11 +10,11 @@ public class VehicleModel {
     @SerializedName("license_plate")
     public String license_plate;
     @SerializedName("model")
-    public String model;
+    public int model;
     @SerializedName("category")
-    public String category;
+    public int category;
     @SerializedName("color")
     public String color;
     @SerializedName("photo1")
-    public File photo1;
+    public String photo1;
 }

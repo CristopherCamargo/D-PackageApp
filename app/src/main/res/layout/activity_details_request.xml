@@ -147,11 +147,6 @@
 
         </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/activity_horizontal_margin"
-                android:layout_weight="0.20" />
-
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -317,11 +312,6 @@
                     android:id="@+id/imageView14"
                     android:layout_weight="1" />
             </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/activity_horizontal_margin"
-                android:layout_weight="0.20" />
 
             <Button
                 android:text="Button"

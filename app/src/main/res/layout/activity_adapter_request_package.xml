@@ -94,7 +94,8 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/layout_ps_list_request">
 
                     <TextView
                         android:text="@string/register_provider"

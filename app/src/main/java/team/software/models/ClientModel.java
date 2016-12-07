@@ -5,6 +5,8 @@ package team.software.models;
  */
 import com.google.gson.annotations.SerializedName;
 public class ClientModel {
+    @SerializedName("id")
+    public int id;
     @SerializedName("useraccount")
     public UserAccountModel useraccount;
     @SerializedName("phone")

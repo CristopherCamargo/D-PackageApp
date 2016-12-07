@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -45,7 +46,19 @@ public class AdapterRequestPackage extends ArrayAdapter<RequestPackageModel> {
         identificador.setText(String.valueOf(requestItem.id));
         tag.setText(requestItem.tags);
         destine.setText(requestItem.destination);
-        provider_service.setText("nada");
+        if(requestItem.status==2) {
+            LinearLayout layout_ps = (LinearLayout) convertView.findViewById(R.id.layout_ps_list_request);
+            layout_ps.setVisibility(View.INVISIBLE);
+        }
+        else{
+            if(requestItem.service!=null) {
+                provider_service.setVisibility(View.VISIBLE);
+                provider_service.setText(requestItem.service.useraccount.first_name);
+            }else{
+                LinearLayout layout_ps = (LinearLayout) convertView.findViewById(R.id.layout_ps_list_request);
+                layout_ps.setVisibility(View.INVISIBLE);
+            }
+        }
         SharedPreferences sharedPref = getContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
         status.setText(sharedPref.getString("status_request_"+requestItem.status,"null"));
         type.setText(sharedPref.getString("type_shipment_"+requestItem.packagetype,"null"));
