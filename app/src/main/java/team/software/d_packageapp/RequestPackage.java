@@ -132,7 +132,7 @@ public class RequestPackage extends AppCompatActivity {
         RequestBody confirm = RequestBody.create(MediaType.parse("multipart/form-data"), "true");
 
         Call<ResponseBody> call = getInstance().saveRequestPackage(
-                "Token 870a38885ad59dc9115b5cbe9656b9a976c305d9",
+                "Token "+token,
                 id,
                 confirm
         );

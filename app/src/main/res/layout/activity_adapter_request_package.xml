@@ -116,14 +116,6 @@
 
             </LinearLayout>
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                app:srcCompat="@mipmap/ic_gps"
-                android:id="@+id/imageButton"
-                android:layout_gravity="center_vertical"
-                android:layout_height="match_parent"
-                android:layout_weight="0.20" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -148,7 +140,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/status_request"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@color/colorAccent"
                 android:gravity="center_vertical|center_horizontal" />
 
         </LinearLayout>

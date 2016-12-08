@@ -3,6 +3,7 @@ package team.software.d_packageapp;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 
@@ -57,6 +59,16 @@ public class HomeClient extends AppCompatActivity implements TabLayout.OnTabSele
 
         //Adding adapter to pager
         viewPager.setAdapter(adapter);
+
+        FloatingActionButton request_package_button = (FloatingActionButton) findViewById(R.id.request_package_button);
+        request_package_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent request_activity = new Intent(getApplicationContext(),RequestPackage.class);
+                request_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(request_activity);
+            }
+        });
 
         //Adding onTabSelectedListener to swipe views
         tabLayout.setOnTabSelectedListener(this);

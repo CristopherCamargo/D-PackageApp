@@ -112,13 +112,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@mipmap/ic_gps"
-            android:id="@+id/imageView13"
-            android:layout_weight="0.19" />
-
     </LinearLayout>
 
 </RelativeLayout>
