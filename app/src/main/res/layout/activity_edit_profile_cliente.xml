@@ -117,14 +117,16 @@
 
         <Button
             android:text="@string/save"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_below="@id/container_date_contact"
             android:id="@+id/buttonSave"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorAccent"
             android:clickable="true"
-            android:enabled="true"/>
+            android:enabled="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/background_light" />
 
     </RelativeLayout>
 </ScrollView>

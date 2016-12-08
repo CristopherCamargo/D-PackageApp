@@ -141,7 +141,8 @@
                 android:id="@+id/status_request"
                 android:layout_weight="1"
                 android:background="@color/colorAccent"
-                android:gravity="center_vertical|center_horizontal" />
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@android:color/background_light" />
 
         </LinearLayout>
     </LinearLayout>

@@ -2,10 +2,12 @@ package team.software.d_packageapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -51,6 +53,16 @@ public class DetailsRequest extends AppCompatActivity {
                 break;
         }
         seekBar.setEnabled(false);
+
+        ImageView image_ps = (ImageView) findViewById(R.id.details_photo_ps);
+        image_ps.setImageURI(Uri.parse(request.service.photo));
+
+        ImageView image1 = (ImageView) findViewById(R.id.details_photo_one);
+        image1.setImageURI(Uri.parse(request.photo1));
+        ImageView image2 = (ImageView) findViewById(R.id.details_photo_two);
+        image2.setImageURI(Uri.parse(request.photo2));
+        ImageView image3 = (ImageView) findViewById(R.id.details_photo_three);
+        image3.setImageURI(Uri.parse(request.photo3));
 
         TextView status = (TextView) findViewById(R.id.details_request_status);
         status.setText(sharedPref.getString("status_request_"+request.status,"null"));

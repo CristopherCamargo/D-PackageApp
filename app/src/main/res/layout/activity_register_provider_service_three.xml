@@ -125,11 +125,13 @@
 
         <Button
             android:text="@string/sign"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:id="@+id/buttonRegistrar"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/background_light"
+            android:layout_gravity="center_vertical|center_horizontal" />
 
     </LinearLayout>
 

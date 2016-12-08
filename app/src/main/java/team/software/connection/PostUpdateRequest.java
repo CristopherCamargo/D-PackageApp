@@ -51,11 +51,11 @@ public class PostUpdateRequest implements AsyncResponse {
             SharedPreferences sharedPref = this.context.getSharedPreferences("D-package", Context.MODE_PRIVATE);
             if(sharedPref.getString("type_user","null").compareTo("service")==0) {
                 Intent home_activity = new Intent(context, HomePrestadorServicio.class);
-                home_activity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(home_activity);
             }else{
                 Intent home_activity = new Intent(context, HomeClient.class);
-                home_activity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(home_activity);
             }
         }

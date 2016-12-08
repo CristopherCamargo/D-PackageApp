@@ -69,7 +69,8 @@
                 android:layout_weight="0.20"
                 android:gravity="center_horizontal"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:background="@android:color/holo_orange_dark" />
+                android:background="?android:attr/colorAccent"
+                android:textColor="@android:color/background_light" />
 
             <LinearLayout
             android:orientation="horizontal"
@@ -82,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@mipmap/perfil_usuario"
-                android:id="@+id/imageView17"
+                android:id="@+id/details_photo_ps"
                 android:layout_weight="1" />
 
             <LinearLayout
@@ -120,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@mipmap/perfil_usuario"
-                android:id="@+id/imageViewC"
+                android:id="@+id/details_photo_client"
                 android:layout_weight="1" />
 
             <LinearLayout
@@ -295,21 +296,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@mipmap/car"
-                    android:id="@+id/imageView16"
+                    android:id="@+id/details_photo_one"
                     android:layout_weight="1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@mipmap/car"
-                    android:id="@+id/imageView15"
+                    android:id="@+id/details_photo_two"
                     android:layout_weight="1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@mipmap/car"
-                    android:id="@+id/imageView14"
+                    android:id="@+id/details_photo_three"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -319,7 +320,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/details_button"
                 android:layout_weight="0.20"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/background_light" />
 
         </LinearLayout>
     </ScrollView>

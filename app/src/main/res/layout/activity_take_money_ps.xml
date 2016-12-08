@@ -61,7 +61,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/background_light" />
 
     </LinearLayout>
 

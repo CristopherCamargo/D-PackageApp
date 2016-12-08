@@ -92,9 +92,10 @@
         android:padding="@dimen/activity_horizontal_margin"
         android:id="@+id/addCard"
         tools:text="@string/add_card"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorAccent"
         android:layout_marginTop="@dimen/button_margin_top"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:textColor="@android:color/background_light" />
 
 </LinearLayout>
 
