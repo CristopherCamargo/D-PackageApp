@@ -61,8 +61,7 @@ public class HomeClient extends AppCompatActivity implements TabLayout.OnTabSele
         //Adding onTabSelectedListener to swipe views
         tabLayout.setOnTabSelectedListener(this);
 
-        new GetDataPackageType(this);
-        new GetDataShipmentType(this);
+
         new GetDataStatus(this);
     }
 

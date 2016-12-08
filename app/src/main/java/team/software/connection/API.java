@@ -41,6 +41,22 @@ public interface API {
             @Part("vehicle.color") RequestBody vehicle_color,
             @Part MultipartBody.Part photo1);
 
+    @Multipart
+    @POST("api/v1/shipment/")
+    Call<ResponseBody> requestPackage(
+            @Header("Authorization") String authorization,
+            @Part("shipmenttype") RequestBody shipmenttype,
+            @Part("packagetype") RequestBody packagetype,
+            @Part MultipartBody.Part photo1,
+            @Part MultipartBody.Part photo2,
+            @Part MultipartBody.Part photo3,
+            @Part("tags") RequestBody tags,
+            @Part("receiver") RequestBody receiver,
+            @Part("origin") RequestBody origin,
+            @Part("destination") RequestBody destination,
+            @Part("insured") RequestBody insured
+    );
+
     @POST("api/v1/user/forgot_password/")
     Call<Useraccount> forgotPassword(@Body Useraccount useraccount);
 
@@ -64,4 +80,18 @@ public interface API {
 
     @GET("api/v1/card/")
     Call<GetDataCards> getCards(@Header("Authorization") String authorization);
+
+    @GET("api/v1/getshipmenttype/")
+    Call<GetDataShipmentType> getShipmentType(@Header("Authorization") String authorization);
+
+    @GET("api/v1/getpackagetype/")
+    Call<GetDataPackageType> getPackageType(@Header("Authorization") String authorization);
+
+    @Multipart
+    @POST("api/v1/shipment/confirm_shipment/")
+    Call<ResponseBody> saveRequestPackage(
+            @Header("Authorization") String authorization,
+            @Part("id") RequestBody id,
+            @Part("confirm") RequestBody confirm
+    );
 }

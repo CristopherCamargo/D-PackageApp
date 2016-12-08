@@ -53,8 +53,7 @@ public class HomePrestadorServicio extends AppCompatActivity implements TabLayou
         //Adding onTabSelectedListener to swipe views
         tabLayout.setOnTabSelectedListener(this);
 
-        new GetDataPackageType(this);
-        new GetDataShipmentType(this);
+
         new GetDataStatus(this);
     }
 

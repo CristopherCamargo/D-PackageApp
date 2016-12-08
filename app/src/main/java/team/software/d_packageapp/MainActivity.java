@@ -25,20 +25,22 @@ public class MainActivity extends AppCompatActivity{
 
     private Class<?> launchWindow() {
 
-        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
+        return RequestPackage.class;
 
-        if (!sharedPref.getBoolean("presentacion", true)) {
-            return SelectRegister.class;
-        }
-
-        if (sharedPref.getBoolean("sesion_open", false)) {
-            if (sharedPref.getString("type_user", "").equals("client")) {
-                return HomeClient.class;
-            } else {
-                return HomePrestadorServicio.class;
-            }
-        }
-
-        return LoginPreview.class;
+//        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
+//
+//        if (!sharedPref.getBoolean("presentacion", true)) {
+//            return SelectRegister.class;
+//        }
+//
+//        if (sharedPref.getBoolean("sesion_open", false)) {
+//            if (sharedPref.getString("type_user", "").equals("client")) {
+//                return HomeClient.class;
+//            } else {
+//                return HomePrestadorServicio.class;
+//            }
+//        }
+//
+//        return LoginPreview.class;
     }
 }

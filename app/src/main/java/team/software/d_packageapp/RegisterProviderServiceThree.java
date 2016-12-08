@@ -84,11 +84,11 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
     TextView tilModel;
     @BindView(R.id.tilCategory)
     TextView tilCategory;
+    @BindView(R.id.til_imageVehicle)
+    TextView tilImageVehicle;
 
     Uri path;
     private final Context mContext = this;
-    @BindView(R.id.til_imageVehicle)
-    TextView tilImageVehicle;
 
     private String APP_DIRECTORY = "D-packageApp/";
     private String MEDIA_DIRECTORY = APP_DIRECTORY + "media";
@@ -297,79 +297,7 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
 
         postDataRegisterProvider.setVehicle(vehicle);
 
-        RequestBody useraccount_first_name = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getFirst_name());
-        RequestBody useraccount_last_name = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getLast_name());
-        RequestBody useraccount_email = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getEmail());
-        RequestBody useraccount_password = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getPassword());
-        RequestBody phone = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getPhone());
-        //photo
-        RequestBody photoFile = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getPhoto());
-        MultipartBody.Part photo = MultipartBody.Part.createFormData("photo", postDataRegisterProvider.getPhoto().getName(), photoFile);
-        //
-        RequestBody birthDate = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getBirthdate());
-        RequestBody address = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getAddress());
-        RequestBody identity_card = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getIdentity_card());
-        // drive Licences
-        RequestBody drive_licenseFile = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getDriver_license());
-        MultipartBody.Part drive_license = MultipartBody.Part.createFormData("driver_license", postDataRegisterProvider.getDriver_license().getName(), drive_licenseFile);
-        //
-        RequestBody vehicle_license_plate = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getLicensePlate());
-        RequestBody vehicle_model = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getModel());
-        RequestBody vehicle_category = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getCategory());
-        RequestBody vehicle_color = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getColor());
-        //photo1
-        RequestBody photo1File = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getPhoto1());
-        MultipartBody.Part photo1 = MultipartBody.Part.createFormData("vehicle.photo1", postDataRegisterProvider.getVehicle().getPhoto1().getName(), photo1File);
-        //
 
-
-        Call<ResponseBody> call = getInstance().registerProvider(
-                useraccount_first_name,
-                useraccount_last_name,
-                useraccount_email,
-                useraccount_password,
-                phone,
-                photo,
-                birthDate,
-                address,
-                identity_card,
-                drive_license,
-                vehicle_license_plate,
-                vehicle_model,
-                vehicle_category,
-                vehicle_color,
-                photo1
-        );
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if (response.code() != 201) {
-                    try {
-                        JSONObject jsonError = new JSONObject(response.errorBody().string());
-                        if (jsonError.getJSONObject("useraccount").get("email") != null) {
-                            Toast.makeText(RegisterProviderServiceThree.this, jsonError.getJSONObject("useraccount").get("email").toString() , Toast.LENGTH_LONG).show();
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                    Toast.makeText(RegisterProviderServiceThree.this, getString(R.string.register_completed), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegisterProviderServiceThree.this, SelectRegister.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.putExtra("register", true);
-                    startActivity(intent);
-
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-
-            }
-        });
 
     }
 
@@ -380,7 +308,79 @@ public class RegisterProviderServiceThree extends AppCompatActivity {
         builder.setTitle("Elije una opcion");
         builder.setItems(options, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int selection) {
+            public void onClick(DialogInterface dialog, int selection) {RequestBody useraccount_first_name = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getFirst_name());
+                RequestBody useraccount_last_name = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getLast_name());
+                RequestBody useraccount_email = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getEmail());
+                RequestBody useraccount_password = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getUseraccount().getPassword());
+                RequestBody phone = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getPhone());
+                //photo
+                RequestBody photoFile = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getPhoto());
+                MultipartBody.Part photo = MultipartBody.Part.createFormData("photo", postDataRegisterProvider.getPhoto().getName(), photoFile);
+                //
+                RequestBody birthDate = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getBirthdate());
+                RequestBody address = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getAddress());
+                RequestBody identity_card = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getIdentity_card());
+                // drive Licences
+                RequestBody drive_licenseFile = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getDriver_license());
+                MultipartBody.Part drive_license = MultipartBody.Part.createFormData("driver_license", postDataRegisterProvider.getDriver_license().getName(), drive_licenseFile);
+                //
+                RequestBody vehicle_license_plate = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getLicensePlate());
+                RequestBody vehicle_model = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getModel());
+                RequestBody vehicle_category = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getCategory());
+                RequestBody vehicle_color = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getColor());
+                //photo1
+                RequestBody photo1File = RequestBody.create(MediaType.parse("multipart/form-data"), postDataRegisterProvider.getVehicle().getPhoto1());
+                MultipartBody.Part photo1 = MultipartBody.Part.createFormData("vehicle.photo1", postDataRegisterProvider.getVehicle().getPhoto1().getName(), photo1File);
+                //
+
+
+                Call<ResponseBody> call = getInstance().registerProvider(
+                        useraccount_first_name,
+                        useraccount_last_name,
+                        useraccount_email,
+                        useraccount_password,
+                        phone,
+                        photo,
+                        birthDate,
+                        address,
+                        identity_card,
+                        drive_license,
+                        vehicle_license_plate,
+                        vehicle_model,
+                        vehicle_category,
+                        vehicle_color,
+                        photo1
+                );
+                call.enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        if (response.code() != 201) {
+                            try {
+                                JSONObject jsonError = new JSONObject(response.errorBody().string());
+                                if (jsonError.getJSONObject("useraccount").get("email") != null) {
+                                    Toast.makeText(RegisterProviderServiceThree.this, jsonError.getJSONObject("useraccount").get("email").toString() , Toast.LENGTH_LONG).show();
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        } else {
+                            Toast.makeText(RegisterProviderServiceThree.this, getString(R.string.register_completed), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(RegisterProviderServiceThree.this, SelectRegister.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            intent.putExtra("register", true);
+                            startActivity(intent);
+
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+                    }
+                });
 //                if (selection == 0) {
 //                    openCamera();
 //                } else
