@@ -11,13 +11,6 @@
         android:orientation="vertical"
         tools:context=".RequestPackage">
 
-        <TextView
-            android:text="@string/new_request_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView16"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -164,8 +157,10 @@
         </RadioGroup>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimary"
             android:id="@+id/buttonSave"
             android:text="@string/save"/>
     </LinearLayout>

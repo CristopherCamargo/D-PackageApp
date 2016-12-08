@@ -56,8 +56,6 @@ import team.software.connection.ShipmentType;
 
 public class RequestPackage extends AppCompatActivity {
 
-    @BindView(R.id.textView16)
-    TextView textView16;
     @BindView(R.id.spinnerTypeRequest)
     Spinner spinnerTypeRequest;
     @BindView(R.id.spinnerTypePackage)
@@ -142,6 +140,8 @@ public class RequestPackage extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.body() != null) {
                     Toast.makeText(RequestPackage.this, "Solicitud Guardada Correctamente", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(RequestPackage.this, HomeClient.class);
+                    startActivity(intent);
                     finish();
                 } else {
                     Toast.makeText(RequestPackage.this, "Hubo Un Error, Intente Mas tarde", Toast.LENGTH_SHORT).show();
@@ -185,7 +185,7 @@ public class RequestPackage extends AppCompatActivity {
 
 
         Call<ResponseBody> call = getInstance().requestPackage(
-                "Token 870a38885ad59dc9115b5cbe9656b9a976c305d9",
+                "Token "+token,
                 shipmenttype,
                 packagetype,
                 photo1,
@@ -248,7 +248,7 @@ public class RequestPackage extends AppCompatActivity {
         sharedPreferences = getApplicationContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
         token = sharedPreferences.getString("user_token", null);
 
-        Call<GetDataShipmentType> response = getInstance().getShipmentType("Token 870a38885ad59dc9115b5cbe9656b9a976c305d9");
+        Call<GetDataShipmentType> response = getInstance().getShipmentType("Token "+token);
         response.enqueue(new Callback<GetDataShipmentType>() {
             @Override
             public void onResponse(Call<GetDataShipmentType> call, Response<GetDataShipmentType> response) {
@@ -281,7 +281,7 @@ public class RequestPackage extends AppCompatActivity {
     }
 
     private void loadTypePackage() {
-        Call<GetDataPackageType> response = getInstance().getPackageType("Token 870a38885ad59dc9115b5cbe9656b9a976c305d9");
+        Call<GetDataPackageType> response = getInstance().getPackageType("Token "+token);
         response.enqueue(new Callback<GetDataPackageType>() {
             @Override
             public void onResponse(Call<GetDataPackageType> call, Response<GetDataPackageType> response) {

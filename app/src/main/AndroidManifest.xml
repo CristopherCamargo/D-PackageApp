@@ -76,7 +76,9 @@
         <activity
             android:name=".HomeClient"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RequestPackage" />
+        <activity
+            android:name=".RequestPackage"
+            android:label="@string/new_request_text"/>
         <activity
             android:name=".RegisterPaymentMethod"
             android:label="@string/add_card" />
