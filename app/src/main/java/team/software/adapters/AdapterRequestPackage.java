@@ -61,7 +61,7 @@ public class AdapterRequestPackage extends ArrayAdapter<RequestPackageModel> {
         }
         SharedPreferences sharedPref = getContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
         status.setText(sharedPref.getString("status_request_"+requestItem.status,"null"));
-        type.setText(sharedPref.getString("type_shipment_"+requestItem.packagetype,"null"));
+        type.setText(sharedPref.getString("type_shipment_"+requestItem.shipmenttype,"null"));
 
         if(requestItem.packagetype==1)
             image.setImageResource(R.mipmap.ic_express_request);

@@ -53,7 +53,7 @@ public class PostAcceptRequest implements AsyncResponse{
             toast.show();
         }else{
             Intent home_activity = new Intent(context,HomePrestadorServicio.class);
-            home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(home_activity);
         }
     }

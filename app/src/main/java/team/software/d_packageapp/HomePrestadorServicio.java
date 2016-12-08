@@ -22,6 +22,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 import team.software.adapters.TabProviderServiceAdapter;
 import team.software.connection.API;
+import team.software.connection.GetDataPackageType1;
+import team.software.connection.GetDataShipmentType1;
 import team.software.connection.logout;
 import team.software.connection.GetDataPackageType;
 import team.software.connection.GetDataShipmentType;
@@ -55,6 +57,8 @@ public class HomePrestadorServicio extends AppCompatActivity implements TabLayou
 
 
         new GetDataStatus(this);
+        new GetDataPackageType1(this);
+        new GetDataShipmentType1(this);
     }
 
     @Override

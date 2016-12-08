@@ -47,7 +47,7 @@ public class AdapterRequestInbox extends ArrayAdapter<RequestPackageModel> {
         tag.setText(requestItem.tags);
         price.setText(String.valueOf(requestItem.price));
         SharedPreferences sharedPref = context.getSharedPreferences("D-package", Context.MODE_PRIVATE);
-        type.setText(sharedPref.getString("type_shipment_"+requestItem.packagetype,"null"));
+        type.setText(sharedPref.getString("type_shipment_"+requestItem.shipmenttype,"null"));
 
         if(requestItem.shipmenttype==1)
             image.setImageResource(R.mipmap.ic_express_request);
