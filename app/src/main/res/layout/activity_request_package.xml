@@ -1,281 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_request_package"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="team.software.d_packageapp.RequestPackage">
-
-    <ScrollView
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:orientation="vertical"
+        tools:context=".RequestPackage">
+
+        <TextView
+            android:text="@string/new_request_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView16"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_request_text"
+            android:layout_margin="10dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerTypeRequest"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_package_text"
+            android:layout_margin="10dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerTypePackage"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/add_image_product"/>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/new_request_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView16"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="@string/type_request_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView17"
-                    android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-                <TextView
-                    android:text="@string/currency_symbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/request_currency"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/request_cost"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:text="@string/standar_package"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/standar_package"
-                    android:checked="true"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="@string/express_package"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/express_package"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <TextView
-                android:text="@string/Tag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView20"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/tag_package" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/receiver"
-                android:text="@string/receiver"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/receiver_text" />
-
-            <TextView
-                android:text="@string/photos_package"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView18"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_input_add"
-                android:id="@+id/load_photo_package"
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:id="@+id/imageProductOne"
+                app:srcCompat="@mipmap/ic_client_select"
                 android:contentDescription="@string/imagen" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView19"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:text="@string/destination_package" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:id="@+id/imageProduct2"
+                app:srcCompat="@mipmap/ic_client_select"
+                android:contentDescription="@string/imagen" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:id="@+id/imageProduct3"
+                app:srcCompat="@mipmap/ic_client_select"
+                android:contentDescription="@string/imagen" />
+        </LinearLayout>
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/imagen"
-                    app:srcCompat="@android:drawable/ic_menu_mylocation"
-                    android:id="@+id/imageButton4"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/destination_package_text"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <TextView
-                android:text="@string/origin_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView21"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/imagen"
-                    app:srcCompat="@android:drawable/ic_menu_mylocation"
-                    android:id="@+id/imageButton5"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/origin_package_text"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <TextView
-                android:text="@string/type_package_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView22"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner_package" />
-
-            <LinearLayout
-                android:orientation="horizontal"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:id="@+id/inputTags"
+                android:inputType="text"
+                android:hint="@string/tag"/>
+        </android.support.design.widget.TextInputLayout>
 
-                <TextView
-                    android:text="@string/insure_text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Insure_text_view"
-                    android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-                <Spinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/spinner_insure"
-                    android:layout_weight="0.70" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <EditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:id="@+id/inputReceiver"
+                android:inputType="text"
+                android:hint="@string/receiver"/>
+        </android.support.design.widget.TextInputLayout>
 
-                <TextView
-                    android:text="@string/insure_package_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView23"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                    android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-                <TextView
-                    android:text="@string/currency_symbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView24"
-                    android:layout_weight="2"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                    android:gravity="end" />
-
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
                 <EditText
-                    android:layout_width="112dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText4"
-                    android:enabled="false"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/inputPointOrigin"
+                    android:inputType="text"
+                    android:hint="@string/origin_text"/>
+            </android.support.design.widget.TextInputLayout>
 
-                    <Button
-                        android:text="@string/calculate_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculate_price"
-                        android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true" />
-
-                    <Button
-                        android:text="@string/new_request_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/newRequest"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:visibility="invisible"/>
-                </RelativeLayout>
-            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/inputPointDestine"
+                    android:inputType="text"
+                    android:hint="@string/destination_package"/>
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
-    </ScrollView>
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/insure_text_view"/>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_yes"
+                android:text="@string/yes"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_no"
+                android:text="@string/no"/>
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSave"
+            android:text="@string/save"/>
+    </LinearLayout>
+</ScrollView>

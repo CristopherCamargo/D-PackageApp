@@ -144,7 +144,6 @@
     <string name="title_activity_floataction">floataction</string>
     <string name="standar_package">Standar Package</string>
     <string name="express_package">Express Package</string>
-    <string name="standar_package_b">Standar Package</string>
     <string name="destination_package">Destination Package</string>
     <string name="calculate_price">Calculate</string>
     <string name="insure_text_view">Insure your package</string>
@@ -165,4 +164,10 @@
     <string name="credit_successfull">Credit Succeessfull!</string>
     <string name="your_money">Your Money</string>
     <string name="take_money">Take Money</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="add_image_product">Add Image Product</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
