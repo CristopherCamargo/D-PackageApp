@@ -2,6 +2,8 @@ package team.software.d_packageapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+
+import java.io.InputStream;
 
 import team.software.connection.PostAcceptRequest;
 import team.software.connection.PostUpdateRequest;
@@ -54,15 +58,16 @@ public class DetailsRequest extends AppCompatActivity {
         }
         seekBar.setEnabled(false);
 
-        ImageView image_ps = (ImageView) findViewById(R.id.details_photo_ps);
+        /*ImageView image_ps = (ImageView) findViewById(R.id.details_photo_ps);
         image_ps.setImageURI(Uri.parse(request.service.photo));
 
         ImageView image1 = (ImageView) findViewById(R.id.details_photo_one);
-        image1.setImageURI(Uri.parse(request.photo1));
+        Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL(imageUrl).getContent());
+        image1.setImageBitmap(Uri.parse(request.photo1));
         ImageView image2 = (ImageView) findViewById(R.id.details_photo_two);
         image2.setImageURI(Uri.parse(request.photo2));
         ImageView image3 = (ImageView) findViewById(R.id.details_photo_three);
-        image3.setImageURI(Uri.parse(request.photo3));
+        image3.setImageURI(Uri.parse(request.photo3));*/
 
         TextView status = (TextView) findViewById(R.id.details_request_status);
         status.setText(sharedPref.getString("status_request_"+request.status,"null"));
