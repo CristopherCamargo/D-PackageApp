@@ -22,12 +22,13 @@ public class ListRequestPS extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        setRetainInstance(true);
         rootView = inflater.inflate(R.layout.activity_list_request_ps, container, false);
         listView = (ListView) rootView.findViewById(R.id.list_request_ps);
         new GetShipmentsPS(this.getContext(),this);
         request = new AdapterRequestPS(getContext(),new ArrayList<RequestPackageModel>());
         listView.setAdapter(request);
+
         return rootView;
     }
 }

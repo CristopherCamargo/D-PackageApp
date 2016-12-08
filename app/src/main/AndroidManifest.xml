@@ -79,7 +79,7 @@
         <activity android:name=".RequestPackage" />
         <activity
             android:name=".RegisterPaymentMethod"
-            android:label="@string/add_card"/>
+            android:label="@string/add_card" />
         <activity
             android:name=".ChangePassword"
             android:label="@string/change_password" />
@@ -102,7 +102,7 @@
             android:label="@string/edit_profile" />
         <activity
             android:name=".PaymentCardManagement"
-            android:label="@string/manage_cards"/>
+            android:label="@string/manage_cards" />
         <activity android:name=".QualifyServiceProvider" />
         <activity
             android:name=".HomePrestadorServicio"
@@ -115,7 +115,9 @@
         <activity android:name=".ListRequestInbox" />
         <activity android:name="team.software.adapters.AdapterRequestPS" />
         <activity android:name=".ListRequestPS" />
-        <activity android:name=".DetailsRequest"></activity>
+        <activity android:name=".DetailsRequest" />
+        <activity android:name=".PaysClient" />
+        <activity android:name=".TakeMoneyPS"></activity>
     </application>
 
 </manifest>

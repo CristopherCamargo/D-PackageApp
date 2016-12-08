@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import team.software.d_packageapp.ListRequestPackage;
 import team.software.d_packageapp.PaymentCardManagement;
+import team.software.d_packageapp.PaysClient;
 import team.software.d_packageapp.Tracing;
 
 /**
@@ -30,7 +31,7 @@ public class TabHomeClientAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new Tracing();
             case 2:
-                return new ListRequestPackage();
+                return new PaysClient();
         }
 
         return null;

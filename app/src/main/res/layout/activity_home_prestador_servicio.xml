@@ -39,12 +39,7 @@
             android:icon="@mipmap/ic_won_money_preview"
             android:id="@+id/tabItemP3" />
 
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@android:drawable/ic_menu_manage"
-            android:id="@+id/tabItemP4" />
-    </android.support.design.widget.TabLayout>
+        </android.support.design.widget.TabLayout>
 
     </android.support.design.widget.AppBarLayout>
 

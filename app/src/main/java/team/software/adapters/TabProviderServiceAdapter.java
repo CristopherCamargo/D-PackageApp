@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import team.software.d_packageapp.ListRequestInbox;
 import team.software.d_packageapp.ListRequestPS;
+import team.software.d_packageapp.TakeMoneyPS;
 
 /**
  * Created by Caceres on 04-12-2016.
@@ -30,9 +31,7 @@ public class TabProviderServiceAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new ListRequestPS();
             case 2:
-                return new ListRequestInbox();
-            case 3:
-                return new ListRequestInbox();
+                return new TakeMoneyPS();
         }
 
         return null;

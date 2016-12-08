@@ -13,4 +13,5 @@ public class UserAccountModel {
     public String last_name;
     @SerializedName("email")
     public String email;
+
 }

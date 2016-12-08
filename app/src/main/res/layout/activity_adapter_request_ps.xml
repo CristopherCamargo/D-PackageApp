@@ -5,10 +5,6 @@
     android:id="@+id/activity_adapter_request_ps"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="team.software.adapters.AdapterRequestPS">
 
     <LinearLayout
@@ -20,14 +16,14 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center_vertical|center_horizontal">
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="0.3">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@mipmap/ic_express_request"
-                android:id="@+id/imageView13"
+                android:id="@+id/image_type_request_ps_a"
                 android:layout_weight="3" />
 
             <TextView
@@ -43,7 +39,7 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="0.30"
             android:gravity="center_vertical">
 
             <LinearLayout
@@ -65,7 +61,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/client_request_ps_a"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:textSize="10sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,7 +84,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/destine_request_ps_a"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:textSize="10sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -109,16 +107,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/status_request_ps_a"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:textSize="10sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <ImageButton
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:srcCompat="@mipmap/ic_gps"
-            android:id="@+id/imageButton6"
-            android:layout_weight="2" />
+            android:id="@+id/imageView13"
+            android:layout_weight="0.19" />
+
     </LinearLayout>
 
 </RelativeLayout>

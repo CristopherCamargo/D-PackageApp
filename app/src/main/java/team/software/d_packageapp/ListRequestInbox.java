@@ -21,6 +21,7 @@ public class ListRequestInbox extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setRetainInstance(true);
         rootView = inflater.inflate(R.layout.activity_list_resquest_inbox, container, false);
         listView = (ListView) rootView.findViewById(R.id.list_request_inbox);
         new GetShipmentsInbox(this.getContext(),this);

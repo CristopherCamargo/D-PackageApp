@@ -136,8 +136,7 @@ public class HomePrestadorServicio extends AppCompatActivity implements TabLayou
     }
 
     @Override
-    public void onTabSelected(TabLayout.Tab tab) {
-        viewPager.setCurrentItem(tab.getPosition());
+    public void onTabSelected(TabLayout.Tab tab) { viewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override

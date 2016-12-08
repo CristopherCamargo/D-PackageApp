@@ -22,7 +22,7 @@ public class ListRequestPackage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        setRetainInstance(true);
         rootView = inflater.inflate(R.layout.activity_list_request_package, container, false);
         listView = (ListView) rootView.findViewById(R.id.list_request_client);
         new GetShipmentsClient(this.getContext(),this);

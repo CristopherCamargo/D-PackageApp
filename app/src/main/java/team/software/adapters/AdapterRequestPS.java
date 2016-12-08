@@ -34,21 +34,21 @@ public class AdapterRequestPS extends ArrayAdapter<RequestPackageModel> {
         final RequestPackageModel requestItem = getItem(position);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_adapter_request_inbox, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_adapter_request_ps, parent, false);
         }
-        TextView client = (TextView) convertView.findViewById(R.id.origin_request_inbox_a);
-        TextView destine = (TextView) convertView.findViewById(R.id.destine_request_inbox_a);
-        TextView status = (TextView) convertView.findViewById(R.id.tag_request_inbox_a);
-        TextView type = (TextView) convertView.findViewById(R.id.text_type_request_ps);
-        ImageView image = (ImageView) convertView.findViewById(R.id.image_type_request_ps);
+        TextView client = (TextView) convertView.findViewById(R.id.client_request_ps_a);
+        TextView destine = (TextView) convertView.findViewById(R.id.destine_request_ps_a);
+        TextView status = (TextView) convertView.findViewById(R.id.status_request_ps_a);
+        TextView type = (TextView) convertView.findViewById(R.id.type_request_ps_a);
+        ImageView image = (ImageView) convertView.findViewById(R.id.image_type_request_ps_a);
 
         client.setText(requestItem.client.useraccount.first_name);
-        destine.setText(requestItem.destination);
+        destine.setText("SDRB:23 POINT(100 100)");
         SharedPreferences sharedPref = context.getSharedPreferences("D-package", Context.MODE_PRIVATE);
         status.setText(sharedPref.getString("status_request_"+requestItem.status,"null"));
-        type.setText(sharedPref.getString("type_shipment_"+requestItem.packagetype,"null"));
+        type.setText(sharedPref.getString("type_shipment_"+requestItem.shipmenttype,"null"));
 
-        if(requestItem.packagetype==1)
+        if(requestItem.shipmenttype==1)
             image.setImageResource(R.mipmap.ic_express_request);
         else
             image.setImageResource(R.mipmap.ic_standard_request);

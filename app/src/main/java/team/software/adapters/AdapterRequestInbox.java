@@ -49,7 +49,7 @@ public class AdapterRequestInbox extends ArrayAdapter<RequestPackageModel> {
         SharedPreferences sharedPref = context.getSharedPreferences("D-package", Context.MODE_PRIVATE);
         type.setText(sharedPref.getString("type_shipment_"+requestItem.packagetype,"null"));
 
-        if(requestItem.packagetype==1)
+        if(requestItem.shipmenttype==1)
             image.setImageResource(R.mipmap.ic_express_request);
         else
             image.setImageResource(R.mipmap.ic_standard_request);
