@@ -50,7 +50,7 @@
     <string name="password">Password</string>
     <string name="placa">License Plate Number</string>
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_password">Password</string>
     <string name="register">Register</string>
     <string name="register_as">Register As:</string>
     <string name="register_client">Client</string>
@@ -94,7 +94,7 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="new_request_text">New Request</string>
     <string name="type_request_text">Type Request</string>
-    <string name="currency_symbol">$</string>
+    <string name="currency_symbol">Bs</string>
     <string name="photos_package">Photos Package</string>
     <string name="destine_text">Destine</string>
     <string name="origin_text">Origin Package</string>
@@ -124,7 +124,7 @@
     <string name="phone">Telephone</string>
     <string name="invalid_phone">Invalid Telephone</string>
     <string name="register_completed">Register Completed</string>
-    <string name="invalid_email_exist">Este email ya existe</string>
+    <string name="invalid_email_exist">Error: this email is register</string>
     <string name="select_image">Select Image</string>
     <string name="uploadLicense">Upload License</string>
     <string name="Color">Color</string>
@@ -170,4 +170,5 @@
     <string name="add_image_product">Add Image Product</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="error_connection_server">Unexpected connection error</string>
 </resources>

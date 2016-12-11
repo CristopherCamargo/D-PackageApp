@@ -3,6 +3,8 @@ package team.software.connection;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -14,6 +16,7 @@ import java.util.Map;
 
 import team.software.adapters.AdapterRequestPackage;
 import team.software.d_packageapp.ListRequestPackage;
+import team.software.d_packageapp.R;
 import team.software.models.RequestPackageModel;
 
 
@@ -39,12 +42,19 @@ public class GetShipmentsClient implements AsyncResponse{
     }
     @Override
     public void processFinish(String output) throws JSONException {
-        Log.i("com.prueba",output);
-        Gson gson = new Gson();
-        Map<String, String> jsonObject = gson.fromJson(output, Map.class);
-        String element = gson.toJson(jsonObject.get("results"));
-        RequestPackageModel[] data= gson.fromJson(element,RequestPackageModel[].class);
-        this.object.request = new AdapterRequestPackage(this.object.getContext(),new ArrayList<RequestPackageModel>(Arrays.asList(data)));
-        this.object.listView.setAdapter(this.object.request);
+        if(output.compareTo("__error_conection")!=0) {
+            Log.i("com.prueba", output);
+            Gson gson = new Gson();
+            Map<String, String> jsonObject = gson.fromJson(output, Map.class);
+            String element = gson.toJson(jsonObject.get("results"));
+            RequestPackageModel[] data = gson.fromJson(element, RequestPackageModel[].class);
+            this.object.circle_progress.setVisibility(View.INVISIBLE);
+            this.object.request = new AdapterRequestPackage(this.object.getContext(), new ArrayList<RequestPackageModel>(Arrays.asList(data)));
+            this.object.listView.setAdapter(this.object.request);
+        }else{
+            this.object.circle_progress.setVisibility(View.INVISIBLE);
+            Toast toast = Toast.makeText(context, context.getString(R.string.error_connection_server), Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 }

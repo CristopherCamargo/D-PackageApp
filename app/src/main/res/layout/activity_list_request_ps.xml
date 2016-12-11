@@ -14,4 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list_request_ps" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="false"
+        android:id="@+id/progress_request_ps" />
 </RelativeLayout>

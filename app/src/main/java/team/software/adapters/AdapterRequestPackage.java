@@ -61,6 +61,22 @@ public class AdapterRequestPackage extends ArrayAdapter<RequestPackageModel> {
         }
         SharedPreferences sharedPref = getContext().getSharedPreferences("D-package", Context.MODE_PRIVATE);
         status.setText(sharedPref.getString("status_request_"+requestItem.status,"null"));
+        switch (requestItem.status){
+            case 2:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status2));
+                break;
+            case 3:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status3));
+                break;
+            case 4:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status4));
+                break;
+            case 5:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status5));
+                break;
+            default:
+                break;
+        }
         type.setText(sharedPref.getString("type_shipment_"+requestItem.shipmenttype,"null"));
 
         if(requestItem.packagetype==1)

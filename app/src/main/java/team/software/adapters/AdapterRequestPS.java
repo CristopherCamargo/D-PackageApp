@@ -48,6 +48,23 @@ public class AdapterRequestPS extends ArrayAdapter<RequestPackageModel> {
         status.setText(sharedPref.getString("status_request_"+requestItem.status,"null"));
         type.setText(sharedPref.getString("type_shipment_"+requestItem.shipmenttype,"null"));
 
+        switch (requestItem.status){
+            case 2:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status2));
+                break;
+            case 3:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status3));
+                break;
+            case 4:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status4));
+                break;
+            case 5:
+                status.setBackgroundColor(getContext().getResources().getColor(R.color.status5));
+                break;
+            default:
+                break;
+        }
+
         if(requestItem.shipmenttype==1)
             image.setImageResource(R.mipmap.ic_express_request);
         else

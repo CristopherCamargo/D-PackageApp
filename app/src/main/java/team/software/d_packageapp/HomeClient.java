@@ -56,11 +56,13 @@ public class HomeClient extends AppCompatActivity implements TabLayout.OnTabSele
         //Initializing viewPager
         viewPager = (ViewPager) findViewById(R.id.container);
 
+
         //Creating our pager adapter
         TabHomeClientAdapter adapter = new TabHomeClientAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
 
         //Adding adapter to pager
         viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         FloatingActionButton request_package_button = (FloatingActionButton) findViewById(R.id.request_package_button);
         request_package_button.setOnClickListener(new View.OnClickListener() {

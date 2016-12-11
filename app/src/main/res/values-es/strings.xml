@@ -49,7 +49,7 @@
     <string name="password">Contraseña</string>
     <string name="placa">Nº de Placa</string>
     <string name="prompt_email">Correo Electrónico</string>
-    <string name="prompt_password">Contraseña (Opcional)</string>
+    <string name="prompt_password">Contraseña</string>
     <string name="register">Registro</string>
     <string name="register_as">Registrarse Como:</string>
     <string name="register_client">Cliente</string>
@@ -94,9 +94,9 @@
     <string name="edit_profile">Editar Perfil</string>
     <string name="new_request_text">Nueva Peticion</string>
     <string name="type_request_text">Tipo de Solicitud</string>
-    <string name="currency_symbol">$</string>
+    <string name="currency_symbol">Bs</string>
     <string name="photos_package">Fotos del Paquete</string>
-    <string name="destine_text">Destine</string>
+    <string name="destine_text">Destino</string>
     <string name="origin_text">Origen Paquete</string>
     <string name="type_package_text">Tipo de Paquete</string>
     <string name="insure_package_text">Valor del Paquete</string>
@@ -108,7 +108,7 @@
     <string name="select_cards">Seleccionar Tarjetas</string>
     <string name="visa">Tarjeta VISA</string>
     <string name="master">Tarjeta MasterCard</string>
-    <string name="Tag">Tag</string>
+    <string name="Tag">Etiqueta</string>
     <string name="submit_comment">Comentar</string>
     <string name="comment">Deja un comentario</string>
     <string name="your_receipt">Tu Recibo</string>
@@ -122,7 +122,7 @@
     <string name="status_send">Enviar</string>
     <string name="phone">Teléfono</string>
     <string name="invalid_phone">Telefono Invalido</string>
-    <string name="register_completed">Register Completed</string>
+    <string name="register_completed">Registro Completo</string>
     <string name="invalid_email_exist">Este email ya existe</string>
     <string name="select_image">Seleccionar Imagen</string>
     <string name="uploadLicense">Subir Licencia</string>
@@ -143,18 +143,18 @@
     <string name="manage_cards">Gestionar Tarjetas</string>
     <string name="standar_package">Paquete Estandar</string>
     <string name="express_package">Paquete Express</string>
-    <string name="destination_package">Destination Package</string>
-    <string name="calculate_price">Calculate</string>
-    <string name="insure_text_view">Insure your package</string>
+    <string name="destination_package">Destino del paquete</string>
+    <string name="calculate_price">Calcular</string>
+    <string name="insure_text_view">Asegura tu paquete</string>
     <string name="receiver">Receptor</string>
-    <string name="text_details_request">Request Detail</string>
+    <string name="text_details_request">Detalles del pedido</string>
     <string name="text_receptor">Recibe</string>
-    <string name="last_payments">Last Payments</string>
-    <string name="actual_mount">Current Mount</string>
+    <string name="last_payments">Ultimos pagos</string>
+    <string name="actual_mount">Monto actual</string>
     <string name="credit_text">Credit</string>
-    <string name="start_dispute">Start Dispute</string>
-    <string name="your_money">Your Money</string>
-    <string name="take_money">Take Money</string>
+    <string name="start_dispute">Iniciar reclamo</string>
+    <string name="your_money">Tu dinero</string>
+    <string name="take_money">Retirar</string>
     <string name="error_conection">Error en la conexion</string>
     <string name="large">Grande</string>
     <string name="medium">Mediano</string>
@@ -169,4 +169,5 @@
     <string name="add_image_product">Agregar Imagenes de Productos</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
+    <string name="error_connection_server">Error inesperado en la conexion</string>
 </resources>

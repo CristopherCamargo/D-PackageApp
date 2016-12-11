@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,8 @@ import team.software.connection.RequestBase;
  */
 public class Login extends AppCompatActivity implements AsyncResponse{
 
+    ProgressBar circle_bar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -35,6 +38,8 @@ public class Login extends AppCompatActivity implements AsyncResponse{
         Button sigIn = (Button)findViewById(R.id.email_sign_in_button);
 
         TextView forgot = (TextView) findViewById(R.id.linkForgotPassword);
+        circle_bar = (ProgressBar) findViewById(R.id.progress_login);
+        circle_bar.setVisibility(View.INVISIBLE);
 
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +52,7 @@ public class Login extends AppCompatActivity implements AsyncResponse{
 
         sigIn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
+                circle_bar.setVisibility(View.VISIBLE);
                 loginIntent();
             }
         });
@@ -69,43 +75,51 @@ public class Login extends AppCompatActivity implements AsyncResponse{
 
     @Override
     public void processFinish(String output) {
-        Log.i("com.prueba",output);
-        Context context = getApplicationContext();
-        Gson gson = new Gson();
-        Map<String, String> jsonObject = gson.fromJson(output, Map.class);
+        if(output.compareTo("__error_conection")!=0){
+            Log.i("com.prueba",output);
+            Context context = getApplicationContext();
+            Gson gson = new Gson();
+            Map<String, String> jsonObject = gson.fromJson(output, Map.class);
 
-        //Verify error or connect
-        String verify = jsonObject.get("status");
-        if(verify != null && !verify.isEmpty()){
-            Toast toast = Toast.makeText(context, getString(R.string.no_login_message), Toast.LENGTH_SHORT);
-            toast.show();
-        }
-        else{
-            //Save token
-            SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package",Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putString("user_token", jsonObject.get("token"));
-            editor.putBoolean("sesion_open", true);
-            editor.putBoolean("logout", false);
-
-            try {
-                JSONObject json = new JSONObject(output);
-                editor.putInt("user_id", Integer.parseInt(json.getJSONObject("useraccount").get("id").toString()));
-                editor.putString("type_user", json.get("type").toString());
-                editor.commit();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if(jsonObject.get("type").compareTo("client")==0) {
-                Intent home_activity = new Intent(this, HomeClient.class);
-                home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(home_activity);
+            //Verify error or connect
+            String verify = jsonObject.get("status");
+            if(verify != null && !verify.isEmpty()){
+                circle_bar.setVisibility(View.INVISIBLE);
+                Toast toast = Toast.makeText(context, getString(R.string.no_login_message), Toast.LENGTH_SHORT);
+                toast.show();
             }
             else{
-                Intent home_activity = new Intent(this, HomePrestadorServicio.class);
-                home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(home_activity);
+                //Save token
+                SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("D-package",Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString("user_token", jsonObject.get("token"));
+                editor.putBoolean("sesion_open", true);
+                editor.putBoolean("logout", false);
+
+                try {
+                    JSONObject json = new JSONObject(output);
+                    editor.putInt("user_id", Integer.parseInt(json.getJSONObject("useraccount").get("id").toString()));
+                    editor.putString("type_user", json.get("type").toString());
+                    editor.commit();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if(jsonObject.get("type").compareTo("client")==0) {
+                    Intent home_activity = new Intent(this, HomeClient.class);
+                    home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(home_activity);
+                }
+                else{
+                    Intent home_activity = new Intent(this, HomePrestadorServicio.class);
+                    home_activity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(home_activity);
+                }
             }
+        }else{
+            circle_bar.setVisibility(View.INVISIBLE);
+            Context context = getApplicationContext();
+            Toast toast = Toast.makeText(context, getString(R.string.error_connection_server), Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 

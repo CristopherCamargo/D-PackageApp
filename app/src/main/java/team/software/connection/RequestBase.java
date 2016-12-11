@@ -62,13 +62,22 @@ public class RequestBase extends AsyncTask<String,Long,String> {
     }
 
     protected void onPostExecute(String response) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        JsonParser parser = new JsonParser();
-        JsonElement element = parser.parse(response);
-        try {
-            delegate.processFinish(gson.toJson(element));
-        } catch (JSONException e) {
-            e.printStackTrace();
+        if(response!=null && !response.isEmpty()) {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            JsonParser parser = new JsonParser();
+            JsonElement element = parser.parse(response);
+            try {
+                delegate.processFinish(gson.toJson(element));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }else{
+            response = "__error_conection";
+            try {
+                delegate.processFinish(response);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
