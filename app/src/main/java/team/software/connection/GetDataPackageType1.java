@@ -3,6 +3,7 @@ package team.software.connection;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -11,6 +12,7 @@ import org.json.JSONException;
 import java.util.List;
 import java.util.Map;
 
+import team.software.d_packageapp.R;
 import team.software.models.PackageTypeModel;
 
 
@@ -34,15 +36,20 @@ public class GetDataPackageType1 implements AsyncResponse{
 
     @Override
     public void processFinish(String output) throws JSONException {
-        Gson gson = new Gson();
-        Map<String, String> jsonObject = gson.fromJson(output, Map.class);
-        String element = gson.toJson(jsonObject.get("packagetype"));
-        PackageTypeModel[] data = gson.fromJson(element,PackageTypeModel[].class);
-        SharedPreferences sharedPref = this.context.getSharedPreferences("D-package", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        for (int i=0;i<data.length;i++){
-            editor.putString("type_package_"+data[i].id,data[i].value);
+        if(output.compareTo("__error_conection")!=0) {
+            Gson gson = new Gson();
+            Map<String, String> jsonObject = gson.fromJson(output, Map.class);
+            String element = gson.toJson(jsonObject.get("packagetype"));
+            PackageTypeModel[] data = gson.fromJson(element,PackageTypeModel[].class);
+            SharedPreferences sharedPref = this.context.getSharedPreferences("D-package", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            for (int i=0;i<data.length;i++){
+                editor.putString("type_package_"+data[i].id,data[i].value);
+            }
+            editor.commit();
+        }else{
+            Toast toast = Toast.makeText(context, context.getString(R.string.error_connection_server), Toast.LENGTH_SHORT);
+            toast.show();
         }
-        editor.commit();
     }
 }
